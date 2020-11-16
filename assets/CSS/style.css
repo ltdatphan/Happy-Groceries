@@ -59,6 +59,17 @@ img {
     font-size: 20px;
 }
 
+.custom-footer{
+    color: white;
+    width: 100%;
+    background-color: #202020;
+    padding: 30px;
+}
+
+.footer-links{
+    display: block;
+}
+
 @media only screen and (max-width: 600px) {
     .navbar-brand{
         width: 70%;
