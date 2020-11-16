@@ -1,0 +1,30 @@
+{
+    "name": "group-17/cps530-project",
+    "authors": [
+        {
+            "name": "Michael Tandoc",
+            "email": "michael.tandoc@ryerson.ca"
+        },
+        {
+            "name": "Rahul Kothwal",
+            "email": "rkothwal@ryerson.ca"
+        },
+        {
+            "name": "Cesar Perez",
+            "email": "cesar.e.perez@ryerson.ca"
+        },
+        {
+            "name": "David Phan",
+            "email": "lethanhdat.phan@ryerson.ca"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CPS530-Project\\": "src/"
+        }
+    },
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.2"
+    }
+}
