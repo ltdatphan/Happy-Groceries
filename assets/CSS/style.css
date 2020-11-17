@@ -68,12 +68,7 @@ img {
     border: 0;
 }
 
-.search {
-    width: 100%;
-}
-
 .category-toggle {
-    color: rgba(255,0,0,1);
     width: 100%;
     display: block;
     margin-left: auto;
@@ -101,7 +96,8 @@ img {
 
 .footer-links{
     display: block;
-    font-size: 20px;
+    font-size: 22px;
+    color: gray
 }
 
 /* For mobile devices */
