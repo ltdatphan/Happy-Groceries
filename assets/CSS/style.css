@@ -5,11 +5,13 @@ img {
 
 /* Icons */
 .custom-icon {
-    height: 30px;
+    height: 32px;
     width: auto;
     background-color: greenyellow;
-    border-radius: 25px;
-    padding: 5px;
+    padding:2px;
+    border-radius: 50%;
+    
+    border: 0;
     margin-right: 10px;
 }
 
