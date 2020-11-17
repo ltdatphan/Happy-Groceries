@@ -1,0 +1,123 @@
+/* Responsive */
+img {
+    width: 100%;
+}
+
+/* Icons */
+.custom-icon {
+    height: 32px;
+    width: auto;
+    background-color: greenyellow;
+    padding:2px;
+    border-radius: 50%;
+    border: 0;
+    margin-right: 10px;
+}
+
+/* Each icon is stored in a  */
+.icon-row{
+    font-size: 20px;
+}
+
+/* Navigation */
+.custom-nav {
+    width: 100%;
+    background-color: #202020;
+}
+
+/* Center items in the drop down */
+.navbar-collapse {
+    text-align: center;
+}
+
+/* Change item colors */
+#navbarItems a, #categoryItems a{
+    color: white;
+    font-size: 20px;
+    
+}
+
+/* Adjust logo size */
+#logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Customize search */ 
+#search-bar {
+    width: 90%;
+    height: 50px;
+    border-radius: 25px;
+    border: 3px solid black;
+    padding-left: 2rem;
+    display: block;
+    margin-left: auto;
+}
+
+/* Remove borders */
+#search-bar:focus, .custom-btn:focus , .category-toggle:focus{
+    outline-width: 0;
+}
+
+.custom-btn {
+    height: 50px;
+    background: greenyellow;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 30px;
+    border: 0;
+}
+
+.category-toggle {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: greenyellow;
+    font-size: 20px;
+}
+
+/* Footer */
+.custom-footer{
+    color: white;
+    width: 100%;
+    background-color: #202020;
+    padding: 30px;
+}
+
+.custom-footer p, span {
+    color: gray
+}
+
+.custom-footer hr {
+    background-color: white;
+}
+
+.footer-links{
+    display: block;
+    font-size: 22px;
+    color: gray
+}
+
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+    #search-bar {  
+        width: 100%;  
+    }
+
+    .custom-btn{
+        margin-right: 0;
+    }
+
+    .category-toggle {
+        margin-top: 5px ;
+    }
+
+    .custom-footer p, span {
+        font-size: 17px;
+    }
+    
+  }
+
