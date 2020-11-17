@@ -10,14 +10,12 @@ img {
     background-color: greenyellow;
     padding:2px;
     border-radius: 50%;
-    
     border: 0;
     margin-right: 10px;
 }
 
 /* Each icon is stored in a  */
 .icon-row{
-    display: flex;
     font-size: 20px;
 }
 
@@ -88,7 +86,7 @@ img {
     padding: 30px;
 }
 
-.custom-footer p {
+.custom-footer p, span {
     color: gray
 }
 
@@ -115,6 +113,10 @@ img {
 
     .category-toggle {
         margin-top: 5px ;
+    }
+
+    .custom-footer p, span {
+        font-size: 17px;
     }
     
   }
