@@ -1,24 +1,49 @@
+/* Responsive */
 img {
     width: 100%;
 }
 
+/* Icons */
+.custom-icon {
+    height: 30px;
+    width: auto;
+    background-color: greenyellow;
+    border-radius: 25px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Each icon is stored in a  */
+.icon-row{
+    display: flex;
+    font-size: 20px;
+}
+
+/* Navigation */
 .custom-nav {
     width: 100%;
     background-color: #202020;
 }
 
-#navbarItems a{
-    color: white;
-    font-size: 20px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+/* Center items in the drop down */
+.navbar-collapse {
+    text-align: center;
 }
 
+/* Change item colors */
+#navbarItems a, #categoryItems a{
+    color: white;
+    font-size: 20px;
+    
+}
+
+/* Adjust logo size */
 #logo {
     height: 50px;
     width: auto;
 }
 
+/* Customize search */ 
 #search-bar {
     width: 90%;
     height: 50px;
@@ -29,6 +54,7 @@ img {
     margin-left: auto;
 }
 
+/* Remove borders */
 #search-bar:focus, .custom-btn:focus , .category-toggle:focus{
     outline-width: 0;
 }
@@ -42,11 +68,9 @@ img {
     border: 0;
 }
 
-
 .search {
     width: 100%;
 }
-
 
 .category-toggle {
     color: rgba(255,0,0,1);
@@ -59,6 +83,7 @@ img {
     font-size: 20px;
 }
 
+/* Footer */
 .custom-footer{
     color: white;
     width: 100%;
@@ -66,27 +91,31 @@ img {
     padding: 30px;
 }
 
-.footer-links{
-    display: block;
+.custom-footer p {
+    color: gray
 }
 
-@media only screen and (max-width: 600px) {
-    .navbar-brand{
-        width: 70%;
-    }
+.custom-footer hr {
+    background-color: white;
+}
 
-    #search-bar {
-        margin-left:0%;
-        width: 100%;
-        height: 50px;
-        border-radius: 25px;
-        border: 3px solid black;
-        padding-left: 2rem;
-    
+.footer-links{
+    display: block;
+    font-size: 20px;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+    #search-bar {  
+        width: 100%;  
     }
 
     .custom-btn{
         margin-right: 0;
+    }
+
+    .category-toggle {
+        margin-top: 5px ;
     }
     
   }
