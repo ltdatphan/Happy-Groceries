@@ -3,6 +3,11 @@
         /* Category gotten from the query string */
         if(isset($_GET['category'])) $cat_param = $_GET['category'];
         else $cat_param = "";
+
+        /*Get the search query*/
+        if (isset($_POST['query']))$query = $_POST['query'];
+        else $query = "";
+
         if ($cat_param == "") echo '<h1 class="title-header">All Products</h1>';
         elseif ($cat_param == "produce") echo '<h1 class="title-header">Produce</h1>';
         elseif ($cat_param == "meats") echo '<h1 class="title-header">Meats</h1>';
@@ -10,6 +15,8 @@
         elseif ($cat_param == "beverages") echo '<h1 class="title-header">Beverages</h1>';
         elseif ($cat_param == "bakery") echo '<h1 class="title-header">Bakery</h1>';
 
+
+        if ($query != "") echo "<h2>Showing results for:".$query." </h2>";
 
         $result = mysqli_query($conn, $sql);
         $num_results = mysqli_num_rows($result);
