@@ -16,13 +16,37 @@ img {
 
 /* Each icon is stored in a  */
 .icon-row {
-    font-size: 20px;
+    font-size: 40px;
+}
+
+/* Title header used to title the current page */
+.title-header {
+    text-align: center;
+    margin: 20px 0px;
 }
 
 /* Product card displayed in the Products page */
 .products-card {
     width: 250px;
     margin-bottom: 30px;
+}
+
+.card-text {
+    color: #212529;
+}
+
+.card-text:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.card-btn {
+    background-color: #202020;
+    color: white;
+}
+
+.card-btn:hover {
+    color: white;
 }
 
 .products-card p {

@@ -25,7 +25,7 @@
 
     <!--Page content-->
     <div class="container">
-        <h1>Products</h1>
+        <h1 class="title-header">Our Products</h1>
         <?php
             $myfile = fopen("../../../mysqlLogin.txt", "r") or die("Unable to open file!");
             $username = fgets($myfile);
@@ -49,14 +49,14 @@
                 $source = $row["source"];
                 $organic = $row["organic"];
                 $prod_url = $row["prod_url"];?>
-                <div class="col-sm">
-                    <div class="card products-card">
-                        <img class="card-img-top" src="<?= $prod_url?>" alt="Product image" style="width:100%">
+                <div class="col-sm d-flex justify-content-center">
+                    <div class="card d-flex products-card justify-content-center">
+                        <a href="#"><img class="card-img-top" src="<?= $prod_url?>" alt="Product image" style="width:100%"></a>
                         <div class="card-body">
-                            <h4 class="card-title"><?= $prod_name?></h4>
+                            <a href="#" class="card-text"><h4 class="card-title" style="height:56px;"><?= $prod_name?></h4></a>
                             <p class="card-text"><?= substr($prod_desc,0,45)."..."?></p>
                             <p class="card-text"><?= "\$".sprintf("%.2f",$price)." CAD"?></p>
-                            <a href="#" class="btn btn-primary">Add to cart</a>
+                            <a href="#" class="btn card-btn">Add to cart</a>
                         </div>
                     </div>
                 </div>
