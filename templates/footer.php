@@ -41,7 +41,7 @@
         </div>
         <hr>
         <p>
-            Copyright &copy 2020 Happy Groceries. Made by group 17 for CPS530.
+            Copyright &copy; 2020 Happy Groceries. Made by group 17 for CPS530.
         </p>
     </div>
 </footer>

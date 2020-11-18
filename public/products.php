@@ -24,9 +24,10 @@
         <!--/Navigation-->
 
         <!--Page content-->
-        <main>
-            <?php include "$templatePath/exampleContent.php"?>
-        </main>
+        <div class="container">
+            <h1>Products</h1>
+            <p>This page is under development</p>
+        </div>
         <!--/Page content-->
 
         <!--Footer-->
