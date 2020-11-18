@@ -3,20 +3,30 @@ img {
     width: 100%;
 }
 
+body {
+    font-family: Verdana, sans-serif;
+}
+
 /* Icons */
 .custom-icon {
-    height: 32px;
-    width: auto;
-    background-color: greenyellow;
-    padding:2px;
+    height: 40px;
+    width: 40px;
+    padding:9px;
+    margin-bottom:10px;
     border-radius: 50%;
     border: 0;
     margin-right: 10px;
+    background-color: greenyellow;
+    color: black;
 }
 
 /* Each icon is stored in a  */
-.icon-row {
-    font-size: 40px;
+.icon-list {
+    font-size: 22px;
+    padding-left: 0px;
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 /* Title header used to title the current page */

@@ -24,10 +24,10 @@
                 </form>
                 <div></div>
                 <button class="custom-btn">
-                    <img src="<?= $assetPath?>/ico/search.png">
+                    <i class="fa fa-search fa-2x"></i>
                 </button>
                 <button class="custom-btn ml-auto mr-auto">
-                    <img src="<?= $assetPath?>/ico/shopping-cart.png">
+                    <i class="fa fa-shopping-cart fa-2x"></i>
                 </button>
             </div>
             <div>

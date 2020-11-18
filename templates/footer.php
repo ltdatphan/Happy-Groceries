@@ -9,34 +9,28 @@
                 </p>
                 <br>
                 <h2>Contact us</h2>
-                <div class="icon-row">
-                    <img class="custom-icon" src="<?= $assetPath?>/ico/phone.png">
-                    <span>123-456-7894</span>
-                </div>
-                <br>
-                <div class="icon-row">
-                    <img class="custom-icon" src="<?= $assetPath?>/ico/email.png">
-                    <span>support@happygroceries.com</span>
-                </div>
+                <ul class="icon-list">
+                    <li><i class="custom-icon fa fa-phone fa-lg"></i> 123-456-7894</li>
+                    <li><i class="custom-icon fa fa-envelope"></i> support@happygroceries.com</li>
+                </ul>
 
             </div>
             <div class="col-6 col-md-3">
                 <h3>Categories</h3>
-                <a href="#" class="footer-links">Link 1</a>
-                <a href="#" class="footer-links">Link 2</a>
-                <a href="#" class="footer-links">Link 4</a>
-                <a href="#" class="footer-links">Link 5</a>
-                <a href="#" class="footer-links">Link 6</a>
-                <a href="#" class="footer-links">Link 7</a>
+                <a href="?page=products" class="footer-links">All Products</a>
+                <a href="?page=products&category=produce" class="footer-links">Produce</a>
+                <a href="?page=products&category=meats" class="footer-links">Meats</a>
+                <a href="?page=products&category=dairy" class="footer-links">Dairy</a>
+                <a href="?page=products&category=beverages" class="footer-links">Beverages</a>
+                <a href="?page=products&category=bakery" class="footer-links">Bakery</a>
             </div>
             <div class="col-6 col-md-3">
                 <h3>Quick Links</h3>
-                <a href="#" class="footer-links">Link 1</a>
-                <a href="#" class="footer-links">Link 2</a>
-                <a href="#" class="footer-links">Link 4</a>
-                <a href="#" class="footer-links">Link 5</a>
-                <a href="#" class="footer-links">Link 6</a>
-                <a href="#" class="footer-links">Link 7</a>
+                <a href="#" class="footer-links">About Us</a>
+                <a href="#" class="footer-links">Contact</a>
+                <a href="#" class="footer-links">Support</a>
+                <a href="#" class="footer-links">Sign Up</a>
+                <a href="#" class="footer-links">Login</a>
             </div>
         </div>
         <hr>
