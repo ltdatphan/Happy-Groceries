@@ -20,11 +20,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "CPS530-Project\\": "src/"
+            "CPS530Project\\": "src/"
         }
     },
     "require": {
         "slim/slim": "4.*",
-        "slim/psr7": "^1.2"
+        "slim/psr7": "^1.2",
+        "slim/php-view": "^3.0"
     }
 }
