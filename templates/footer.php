@@ -10,12 +10,12 @@
                 <br>
                 <h2>Contact us</h2>
                 <div class="icon-row">
-                    <img class="custom-icon" src="<?php echo $basePath?>/ico/phone.png">
+                    <img class="custom-icon" src="<?= $assetPath?>/ico/phone.png">
                     <span>123-456-7894</span>
                 </div>
                 <br>
                 <div class="icon-row">
-                    <img class="custom-icon" src="<?php echo $basePath?>/ico/email.png">
+                    <img class="custom-icon" src="<?= $assetPath?>/ico/email.png">
                     <span>support@happygroceries.com</span>
                 </div>
 

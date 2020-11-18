@@ -3,7 +3,7 @@
         <div class="grid" style="width: 100%;">
             <div class="row">
                 <a class="navbar-brand" href="#">
-                    <img id="logo" src="<?php echo $basePath?>/img/flat-logo.png">
+                    <img id="logo" src="<?= $assetPath?>/img/flat-logo.png">
                 </a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,10 +24,10 @@
                 </form>
                 <div></div>
                 <button class="custom-btn">
-                    <img src="<?php echo $basePath?>/ico/search.png">
+                    <img src="<?= $assetPath?>/ico/search.png">
                 </button>
                 <button class="custom-btn ml-auto mr-auto">
-                    <img src="<?php echo $basePath?>/ico/shopping-cart.png">
+                    <img src="<?= $assetPath?>/ico/shopping-cart.png">
                 </button>
             </div>
             <div>

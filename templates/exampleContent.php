@@ -5,5 +5,5 @@
     <p>
         <?= $exampleVariable?>
     </p>
-    <img id="logo" src="<?php echo $basePath?>/img/flat-logo.png">
+    <img id="logo" src="<?= $assetPath?>/img/flat-logo.png">
 </div>
