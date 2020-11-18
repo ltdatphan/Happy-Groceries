@@ -15,8 +15,18 @@ img {
 }
 
 /* Each icon is stored in a  */
-.icon-row{
+.icon-row {
     font-size: 20px;
+}
+
+/* Product card displayed in the Products page */
+.products-card {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.products-card p {
+    font-size: 13px;
 }
 
 /* Navigation */
