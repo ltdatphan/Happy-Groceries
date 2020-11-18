@@ -1,50 +1,25 @@
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark custom-nav">
-    <div class="container">
-        <div class="grid" style="width: 100%;">
-            <div class="row">
-                <a class="navbar-brand" href="#">
-                    <img id="logo" src="<?= $assetPath?>/img/flat-logo.png">
-                </a>
-                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="navbarItems" class="collapse navbar-collapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#" class="nav-item, nav-link">About us</a>
-                        <a href="#" class="nav-item, nav-link">Contact</a>
-                        <a href="#" class="nav-item, nav-link">Support</a>
-                        <a href="#" class="nav-item, nav-link">Sign up</a>
-                        <a href="#" class="nav-item, nav-link">Log in</a>
-                    </div>
-                </div>
-            </div>
-            <div style="display: flex;">
-                <form style="width: 70%;">
-                    <input id="search-bar" type="text">
-                </form>
-                <div></div>
-                <button class="custom-btn">
-                    <img src="<?= $assetPath?>/ico/search.png">
-                </button>
-                <button class="custom-btn ml-auto mr-auto">
-                    <img src="<?= $assetPath?>/ico/shopping-cart.png">
-                </button>
-            </div>
-            <div>
-                <button class="navbar-toggler category-toggle" type="button" data-toggle="collapse" data-target="#categoryItems" aria-controls="categoryItems" aria-expanded="false" aria-label="Toggle navigation">
-                    <h5 style="color: black;">Categories</h5>
-                </button>
-                <div id="categoryItems" class="collapse navbar-collapse">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item, nav-link">Apple</a>
-                        <a href="#" class="nav-item, nav-link">Banana</a>
-                        <a href="#" class="nav-item, nav-link">Grape</a>
-                        <a href="#" class="nav-item, nav-link">Pineapple</a>
-                        <a href="#" class="nav-item, nav-link">Strawberry</a>
-                        <a href="#" class="nav-item, nav-link">Pizza</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
+
+    <head>
+        <!-- Define your variables here (Only title should be changed! The path variables should stay the same. Feel free to create new variables if needed). -->
+        <?php
+        $assetPath = "../assets";
+        $templatePath = "../templates";
+        $title = "Hello Groceries";
+        ?>
+        <!-- Boostrap CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!-- External CSS-->
+        <link rel="stylesheet" href="<?= $assetPath?>/css/style.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?= $title?></title>
+    </head>
+    <body>
+        <!--Navigation-->
+        <?php include "$templatePath/navigation.php"?>
+    
+    </body>
+</html>
