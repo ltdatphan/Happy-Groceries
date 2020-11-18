@@ -1,7 +1,8 @@
 <div class="container">
     <?php
         /* Category gotten from the query string */
-        $cat_param = $_GET['category'];
+        if(isset($_GET['category'])) $cat_param = $_GET['category'];
+        else $cat_param = "";
         if ($cat_param == "") echo '<h1 class="title-header">All Products</h1>';
         elseif ($cat_param == "produce") echo '<h1 class="title-header">Produce</h1>';
         elseif ($cat_param == "meats") echo '<h1 class="title-header">Meats</h1>';
