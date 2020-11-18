@@ -1,47 +1,31 @@
-<footer class="custom-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <h2>About us</h2>
-                <p>
-                    We are a company that specializes in grocery delivery.
-                    We carry the freshest groceries in town! Order today!
-                </p>
-                <br>
-                <h2>Contact us</h2>
-                <div class="icon-row">
-                    <img class="custom-icon" src="<?= $basePath?>/ico/phone.png">
-                    <span>123-456-7894</span>
-                </div>
-                <br>
-                <div class="icon-row">
-                    <img class="custom-icon" src="<?= $basePath?>/ico/email.png">
-                    <span>support@happygroceries.com</span>
-                </div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Boostrap CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-            </div>
-            <div class="col-6 col-md-3">
-                <h3>Categories</h3>
-                <a href="#" class="footer-links">Link 1</a>
-                <a href="#" class="footer-links">Link 2</a>
-                <a href="#" class="footer-links">Link 4</a>
-                <a href="#" class="footer-links">Link 5</a>
-                <a href="#" class="footer-links">Link 6</a>
-                <a href="#" class="footer-links">Link 7</a>
-            </div>
-            <div class="col-6 col-md-3">
-                <h3>Quick Links</h3>
-                <a href="#" class="footer-links">Link 1</a>
-                <a href="#" class="footer-links">Link 2</a>
-                <a href="#" class="footer-links">Link 4</a>
-                <a href="#" class="footer-links">Link 5</a>
-                <a href="#" class="footer-links">Link 6</a>
-                <a href="#" class="footer-links">Link 7</a>
-            </div>
-        </div>
-        <hr>
-        <p>
-            Copyright &copy 2020 Happy Groceries. Made by group 17 for CPS530.
-        </p>
-    </div>
-</footer>
+        <!-- External CSS-->
+        <link rel="stylesheet" href="<?php echo $basePath?>/css/style.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?= $title?></title>
+    </head>
+    <body>
+        <!--Navigation-->
+        <?php include 'header.php'?>
+        <!--/Navigation-->
+
+        <!--Page content-->
+        <main>
+            <?php include 'exampleContent.php'?>
+        </main>
+        <!--/Page content-->
+
+        <!--Footer-->
+        <?php include 'footer.php'?>
+        <!--/Footer-->
+    
+    </body>
+</html>

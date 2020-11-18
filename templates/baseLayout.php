@@ -7,24 +7,24 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
         <!-- External CSS-->
-        <link rel="stylesheet" href="<?= $basePath?>/css/style.css">
+        <link rel="stylesheet" href="<?php echo $basePath?>/css/style.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $title?></title>
     </head>
     <body>
         <!--Navigation-->
-        <?= $this->fetch("header.php"); ?>
+        <?php include 'header.php'?>
         <!--/Navigation-->
 
         <!--Page content-->
         <main>
-            <?= $content?>
+            <?php include 'exampleContent.php'?>
         </main>
         <!--/Page content-->
 
         <!--Footer-->
-        <?= $this->fetch("footer.php"); ?>
+        <?php include 'footer.php'?>
         <!--/Footer-->
     
     </body>
