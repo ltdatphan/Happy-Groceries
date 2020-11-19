@@ -5,6 +5,7 @@ img {
 
 body {
     font-family: Verdana, sans-serif;
+    background-color: #202020;
 }
 
 /* Icons */
@@ -32,7 +33,7 @@ body {
 /* Title header used to title the current page */
 .title-header {
     text-align: center;
-    margin: 20px 0px;
+    padding: 30px 0px;
 }
 
 /* Product card displayed in the Products page */

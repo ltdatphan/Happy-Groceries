@@ -12,7 +12,9 @@ $conn = mysqli_connect("localhost", $username, $password, $username) or die("Can
 // $conn = mysqli_connect("localhost", 'hello', 'world', 'hello') or die("Cannot connect to database!");
 $sql = "SELECT * FROM Products ORDER BY id DESC";
 
+echo "<div style='background-color:white'>";
 include $page . '.php';
+echo "</div>";
 
 
 
