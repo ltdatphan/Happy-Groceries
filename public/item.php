@@ -45,9 +45,9 @@
                                 $prod_url = $row["prod_url"];?>
                                 <div class="col-sm d-flex justify-content-center">
                                     <div class="card d-flex products-card card-small justify-content-center">
-                                        <a href="?page=item&id=<?= $id?>"><img class="card-img-top" src="<?= $prod_url?>" alt="Product image" style="width:100%"></a>
+                                        <a href="?page=item&id=<?= $id?>"><img class="card-img-top" src="<?= $prod_url?>" alt="Product image" style="width:100%; border-radius: 10px;"></a>
                                         <div class="card-body" style="padding:0px 20px">
-                                            <a href="?page=item&id=<?= $id?>" class="card-text"><h5 class="card-title" style="height:48px; margin: 6px 0px"><?= $prod_name?></h5></a>              
+                                            <!-- <a href="?page=item&id=<?= $id?>" class="card-text"><h6 class="card-title" style="height:48px; margin: 6px 0px"><?= $prod_name?></h6></a>               -->
                                         </div>
                                     </div>
                                 </div>
