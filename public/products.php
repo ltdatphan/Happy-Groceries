@@ -36,7 +36,7 @@
             $organic = $row["organic"];
             $prod_url = $row["prod_url"];?>
             <div class="col-sm d-flex justify-content-center">
-                <div class="card d-flex products-card justify-content-center">
+                <div class="card d-flex products-card justify-content-center shadow p-3 mb-5 rounded">
                     <a href="?page=item&id=<?= $id?>"><img class="card-img-top" src="<?= $prod_url?>" alt="Product image" style="width:100%"></a>
                     <div class="card-body">
                         <a href="?page=item&id=<?= $id?>" class="card-text"><h4 class="card-title" style="height:56px;"><?= $prod_name?></h4></a>

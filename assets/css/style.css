@@ -33,13 +33,24 @@ body {
 /* Title header used to title the current page */
 .title-header {
     text-align: center;
-    padding: 20px 0px;
+    padding: 30px 0px;
+
 }
 
 /* Product card displayed in the Products page */
 .products-card {
     width: 250px;
     margin-bottom: 30px;
+    text-align: center;
+    border-style: none;
+    background-color: rgb(251,247,243);
+}
+
+.card-small {
+    padding: 0;
+    margin-top: 30px;
+    width: 150px;
+    border:0;
 }
 
 .card-text {

@@ -21,6 +21,7 @@ include $page . '.php';
 echo "</div>";
 
 
+
 include '../templates/footer.php'
 ?>
 
