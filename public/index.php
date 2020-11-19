@@ -16,7 +16,7 @@ $conn = mysqli_connect("localhost", $username, $password, $username) or die("Can
 
 $sql = "SELECT * FROM Products ORDER BY id DESC";
 
-echo "<div style='background-color: rgb(255,249,246);'>";
+echo "<div style='background-color: rgb(255,253,250);'>";
 include $page . '.php';
 echo "</div>";
 
