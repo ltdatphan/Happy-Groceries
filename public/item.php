@@ -1,24 +1,15 @@
 <div class="container">
-    <!-- <h1 class="title-header">TESTING PAGE</h1>
-    <p>You have clicked on </p> -->
     <?php
         $id_param = $_GET['id'];
-        // echo $id_param;
         $result = mysqli_query($conn, $sql);
-        $common_cat;
-        $curr_id;
 
         while($row = mysqli_fetch_assoc($result)) {
-            $category = $row["category"];
-            $common_cat = $category;   
-            $id = $row["id"];
-            $curr_id = $id;
+            $category = $row["category"];  
+            $id = $prev_id = $row["id"];
             if ($id_param != "" && $id != $id_param) continue;
             $prod_name = $row["prod_name"];
             $prod_desc = $row["prod_desc"];
             $price = $row["price"];
-            $source = $row["source"];
-            $organic = $row["organic"];
             $prod_url = $row["prod_url"];?>
             <div class="container">
                 <h1 class="title-header">Product Details</h1>
@@ -32,16 +23,14 @@
                         <p class=""><?= "\$".sprintf("%.2f",$price)." CAD"?></p>
                         <a href="#" class="btn card-btn">Add to cart</a>
                         <hr>
-                        <h4>Similar Products<h4>
+                        <h4>Similar Products</h4>
                         <?php
                             $result = mysqli_query($conn, $sql);
-                            $count=0;
+                            $count=1;
+                            echo "<div style='display: flex'>";
                             while($row = mysqli_fetch_assoc($result)){
-                                $count+=1;
-                                $category = $row["category"];
                                 $id = $row["id"];
-                                if (($common_cat != "" && $category != $common_cat) || $id == $curr_id) continue;
-                                $prod_name = $row["prod_name"];
+                                if (($row["category"] != $category) || $id == $prev_id) continue;
                                 $prod_url = $row["prod_url"];?>
                                 <div class="col-sm d-flex justify-content-center">
                                     <div class="card d-flex products-card card-small justify-content-center">
@@ -53,8 +42,9 @@
                                 </div>
                                 <?php
                                 if($count==3) break;
+                                else $count+=1;
                             }
-                            echo '</div>';
+                            echo '</div></div>';
                         ?>
                         </div>
                     </div>
