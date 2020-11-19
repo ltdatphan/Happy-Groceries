@@ -19,11 +19,11 @@
                 </div>
             </div>
             <div style="display: flex;">
-                <form style="width: 70%;" id="search-form" method="post">
-                    <input id="search-bar" type="text" name="query">
+                <form style="width: 70%;" id="search-form" autocomplete="off">
+                    <input id="search-bar" type="text" name="item">
                 </form>
                 <div></div>
-                <button class="custom-btn" type="submit" form="search-form">
+                <button class="custom-btn" onclick="search()">
                     <i class="fa fa-search fa-2x"></i>
                 </button>
                 <button class="custom-btn ml-auto mr-auto">

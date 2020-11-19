@@ -5,8 +5,8 @@
         else $cat_param = "";
 
         /*Get the search query*/
-        if (isset($_POST['query']))$query = $_POST['query'];
-        else $query = "";
+        if (isset($_GET['item']))$search_item = $_GET['item'];
+        else $search_item = "";
 
         if ($cat_param == "") echo '<h1 class="title-header">All Products</h1>';
         elseif ($cat_param == "produce") echo '<h1 class="title-header">Produce</h1>';
@@ -16,7 +16,7 @@
         elseif ($cat_param == "bakery") echo '<h1 class="title-header">Bakery</h1>';
 
 
-        if ($query != "") echo "<h2>Showing results for:".$query." </h2>";
+        if ($search_item != "") echo "<h4>Showing results for: <em>".$search_item."</em></h4><br>";
 
         $result = mysqli_query($conn, $sql);
         $num_results = mysqli_num_rows($result);
@@ -29,6 +29,7 @@
             if ($cat_param != "" && $category != $cat_param) continue;
             $id = $row["id"];
             $prod_name = $row["prod_name"];
+            if ($search_item != "" && !is_numeric(stripos($prod_name, $search_item))) continue;
             $prod_desc = $row["prod_desc"];
             $price = $row["price"];
             $source = $row["source"];

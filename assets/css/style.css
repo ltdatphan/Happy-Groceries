@@ -5,6 +5,7 @@ img {
 
 body {
     font-family: Verdana, sans-serif;
+    background-color: #202020;
 }
 
 /* Icons */
@@ -32,7 +33,7 @@ body {
 /* Title header used to title the current page */
 .title-header {
     text-align: center;
-    margin: 20px 0px;
+    padding: 20px 0px;
 }
 
 /* Product card displayed in the Products page */
@@ -78,7 +79,12 @@ body {
 #navbarItems a, #categoryItems a{
     color: white;
     font-size: 20px;
-    
+}
+
+#categoryItems {
+    border-radius: 20px;
+    padding: 0 25px;
+    background-color: rgb(50,50,50);
 }
 
 /* Adjust logo size */
@@ -103,13 +109,14 @@ body {
     outline-width: 0;
 }
 
-.custom-btn {
+.custom-btn, .custom-btn:active {
     height: 50px;
     background: greenyellow;
     padding: 10px;
     border-radius: 20px;
     margin-right: 30px;
     border: 0;
+    color: black;
 }
 
 .category-toggle {
