@@ -19,8 +19,8 @@
                 </div>
             </div>
             <div style="display: flex;">
-                <form style="width: 70%;" id="search-form" autocomplete="off">
-                    <input id="search-bar" type="text" name="item">
+                <form style="width: 70%;" id="search-form" autocomplete="off" method="get" action="../backend/formhandler.php">
+                    <input id="search-bar" type="text" name="item" value="Search..." onfocus="focused()" onblur="unfocused()" style="color:rgb(125,125,125)">
                 </form>
                 <div></div>
                 <button class="custom-btn" onclick="search()">

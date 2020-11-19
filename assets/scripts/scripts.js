@@ -1,11 +1,20 @@
 function search() {
-    var item = document.getElementById("search-bar").value;
-    window.location.href = "?page=products&item=" + item;
+    var search = document.getElementById("search-bar").value;
+    window.location.href = "?page=products&item=" + search;
 }
 
-document.getElementById('search-bar').addEventListener('keyup', function(event) {
-    if (event.code === 'Enter') {
-        event.preventDefault();
-        search();
+function focused() {
+    var search = document.getElementById("search-bar").value;
+    if (search == 'Search...') {
+        document.getElementById("search-bar").value = '';
+        document.getElementById("search-bar").style.color="black";
     }
-  });
+}
+
+function unfocused() {
+    var search = document.getElementById("search-bar").value;
+    if (search == '') {
+        document.getElementById("search-bar").value = 'Search...';
+        document.getElementById("search-bar").style.color="rgb(125,125,125)";
+    }
+}
