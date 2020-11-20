@@ -64,11 +64,18 @@ body {
 
 .card-btn {
     background-color: #202020;
-    color: white;
+    color: rgb(200, 200, 200);
 }
 
 .card-btn:hover {
     color: white;
+    background-color: rgb(60,60,70);
+    outline: none;
+}
+
+.card-btn:active {
+    color: white;
+    background-color: black;
 }
 
 .products-card p {
@@ -161,6 +168,45 @@ body {
     font-size: 22px;
     color: gray
 }
+
+/* For home page */
+.banner-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(https://images.unsplash.com/photo-1506617564039-2f3b650b7010?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    height: 525px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.banner-img2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(../img/banner2.jpg);
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.banner-img h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+}
+
+
+.banner-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.banner-btn, .banner-btn:hover {
+    background-color: greenyellow;
+    font-size: 1.5em;
+    color: black;
+}
+
 
 
 /* For mobile devices */
