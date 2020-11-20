@@ -1,20 +1,22 @@
 <div class="container">
     <?php
         /* Category gotten from the query string */
-        if(isset($_GET['category'])) $cat_param = $_GET['category'];
-        else $cat_param = "";
+        $cat_param = $_GET['category'] ?? '';
+
+        $cat_name = [
+            'produce' => 'Produce',
+            'meats' => 'Meats',
+            'dairy' => 'Dairy',
+            'beverages' => 'Beverages',
+            'bakery' => 'Bakery',
+            '' => 'All Products'
+        ];
+
+        echo "<h1 class='title-header'>{$cat_name[$cat_param]}</h1>"; 
 
         /*Get the search query*/
         if (isset($_GET['item']))$search_item = $_GET['item'];
         else $search_item = "";
-
-        if ($cat_param == "") echo '<h1 class="title-header">All Products</h1>';
-        elseif ($cat_param == "produce") echo '<h1 class="title-header">Produce</h1>';
-        elseif ($cat_param == "meats") echo '<h1 class="title-header">Meats</h1>';
-        elseif ($cat_param == "dairy") echo '<h1 class="title-header">Dairy</h1>';
-        elseif ($cat_param == "beverages") echo '<h1 class="title-header">Beverages</h1>';
-        elseif ($cat_param == "bakery") echo '<h1 class="title-header">Bakery</h1>';
-
 
         if ($search_item != "") echo "<h4>Showing results for: <em>".$search_item."</em></h4><br>";
 
