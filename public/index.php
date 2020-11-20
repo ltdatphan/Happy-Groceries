@@ -14,7 +14,7 @@ $conn = mysqli_connect("localhost", $username, $password, $username) or die("Can
 //Connection to local database. Comment below out if you are hosting on Moons
 //$conn = mysqli_connect("localhost", 'hello', 'world', 'hello') or die("Cannot connect to database!");
 
-$sql = "SELECT * FROM Products ORDER BY id DESC";
+$sql = "SELECT * FROM Products ORDER BY category DESC";
 
 echo "<div style='background-color: rgb(255,253,250);'>";
 include $page . '.php';

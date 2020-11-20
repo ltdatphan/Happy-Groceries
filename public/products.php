@@ -29,7 +29,7 @@
             if ($cat_param != "" && $category != $cat_param) continue;
             $id = $row["id"];
             $prod_name = $row["prod_name"];
-            if ($search_item != "" && !is_numeric(stripos($prod_name, $search_item))) continue;
+            if ($search_item != "" && (!is_numeric(stripos($prod_name, $search_item)) && !is_numeric(stripos($category, $search_item)))) continue;
             $prod_desc = $row["prod_desc"];
             $price = $row["price"];
             $source = $row["source"];

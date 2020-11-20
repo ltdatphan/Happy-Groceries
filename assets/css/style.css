@@ -53,6 +53,18 @@ body {
     border:0;
 }
 
+.related-products {
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.related-products img {
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
 .card-text {
     color: #212529;
 }
@@ -64,10 +76,15 @@ body {
 
 .card-btn {
     background-color: #202020;
-    color: white;
+    color: rgb(200, 200, 200);
 }
 
 .card-btn:hover {
+    color: white;
+}
+
+.card-btn:active {
+    background-color: black;
     color: white;
 }
 
@@ -96,6 +113,11 @@ body {
     border-radius: 20px;
     padding: 0 25px;
     background-color: rgb(50,50,50);
+}
+
+.active-link {
+    background-color: rgb(100,100,100); 
+    border-radius: 20px;
 }
 
 /* Adjust logo size */
@@ -164,6 +186,18 @@ body {
 
 
 /* For mobile devices */
+@media only screen and (max-width: 450px) {
+
+    .custom-footer li {
+        font-size: 14px;
+    }
+
+    .custom-footer h3 {
+        font-size: 17px;
+    }
+    
+  }
+
 @media only screen and (max-width: 600px) {
     #search-bar {  
         width: 100%;  
@@ -177,9 +211,8 @@ body {
         margin-top: 5px ;
     }
 
-    .custom-footer p, span {
+    .custom-footer p, li {
         font-size: 17px;
     }
     
   }
-

@@ -10,11 +10,11 @@
                 </button>
                 <div id="navbarItems" class="collapse navbar-collapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="#" class="nav-item, nav-link">About us</a>
-                        <a href="#" class="nav-item, nav-link">Contact</a>
-                        <a href="#" class="nav-item, nav-link">Support</a>
-                        <a href="#" class="nav-item, nav-link">Sign up</a>
-                        <a href="#" class="nav-item, nav-link">Log in</a>
+                        <a href="#" class="nav-item nav-link">About us</a>
+                        <a href="#" class="nav-item nav-link">Contact</a>
+                        <a href="#" class="nav-item nav-link">Support</a>
+                        <a href="#" class="nav-item nav-link">Sign up</a>
+                        <a href="#" class="nav-item nav-link">Log in</a>
                     </div>
                 </div>
             </div>
@@ -36,12 +36,12 @@
                 </button>
                 <div id="categoryItems" class="collapse navbar-collapse">
                     <div class="navbar-nav">
-                        <a href="?page=products" class="nav-item, nav-link">All Products</a>
-                        <a href="?page=products&category=produce" class="nav-item, nav-link">Produce</a>
-                        <a href="?page=products&category=meats" class="nav-item, nav-link">Meats</a>
-                        <a href="?page=products&category=dairy" class="nav-item, nav-link">Dairy</a>
-                        <a href="?page=products&category=beverages" class="nav-item, nav-link">Beverages</a>
-                        <a href="?page=products&category=bakery" class="nav-item, nav-link">Bakery</a>
+                        <a href="?page=products" class="nav-item nav-link <?=isset($_GET['page'])&&$_GET['page']=='products'&&!isset($_GET['category'])?'active-link':''?>">All Products</a>
+                        <a href="?page=products&category=produce" class="nav-item nav-link <?=isset($_GET['category'])&&$_GET['category']=='produce'?'active-link':''?>">Produce</a>
+                        <a href="?page=products&category=meats" class="nav-item nav-link <?=isset($_GET['category'])&&$_GET['category']=='meats'?'active-link':''?>">Meats</a>
+                        <a href="?page=products&category=dairy" class="nav-item nav-link <?=isset($_GET['category'])&&$_GET['category']=='dairy'?'active-link':''?>">Dairy</a>
+                        <a href="?page=products&category=beverages" class="nav-item nav-link <?=isset($_GET['category'])&&$_GET['category']=='beverages'?'active-link':''?>">Beverages</a>
+                        <a href="?page=products&category=bakery" class="nav-item nav-link <?=isset($_GET['category'])&&$_GET['category']=='bakery'?'active-link':''?>">Bakery</a>
                     </div>
                 </div>
             </div>

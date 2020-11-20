@@ -25,21 +25,15 @@
                         <hr>
                         <h4>Similar Products</h4>
                         <?php
+                            $sql = "SELECT * FROM Products ORDER BY RAND()";
                             $result = mysqli_query($conn, $sql);
                             $count=1;
-                            echo "<div style='display: flex'>";
+                            echo "<div class='related-products'>";
                             while($row = mysqli_fetch_assoc($result)){
                                 $id = $row["id"];
                                 if (($row["category"] != $category) || $id == $prev_id) continue;
                                 $prod_url = $row["prod_url"];?>
-                                <div class="col-sm d-flex justify-content-center">
-                                    <div class="card d-flex products-card card-small justify-content-center">
-                                        <a href="?page=item&id=<?= $id?>"><img class="card-img-top" src="<?= $prod_url?>" alt="Product image" style="width:100%; border-radius: 10px;"></a>
-                                        <div class="card-body" style="padding:0px 20px">
-                                            <!-- <a href="?page=item&id=<?= $id?>" class="card-text"><h6 class="card-title" style="height:48px; margin: 6px 0px"><?= $prod_name?></h6></a>               -->
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="?page=item&id=<?= $id?>"><img src="<?= $prod_url?>" alt="Product image"></a>
                                 <?php
                                 if($count==3) break;
                                 else $count+=1;
