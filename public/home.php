@@ -16,8 +16,8 @@
     <div class="container">
         <div class="banner-text">
             <h1>New around here?</h1>
-            <h2>Make your very first account and </h2>
-            <h2>start shopping today!</h2>
+            <h4>Make an account and start</h4>
+            <h4>shopping right away!</h4>
             <br><br>
             <a href="?page=products" class="btn btn-light banner-btn" >Sign up</a> 
     </div>
