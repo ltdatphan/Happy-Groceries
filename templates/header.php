@@ -15,7 +15,12 @@
         <!-- External CSS&JS-->
         <link rel="stylesheet" href="<?= $assetPath?>/css/style.css">
         <script src="<?= $assetPath?>/scripts/scripts.js"></script>
-
+        
+        <!-- Google fonts -->
+       
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $title?></title>
     </head>
