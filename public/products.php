@@ -27,9 +27,10 @@
         while($row = mysqli_fetch_assoc($result)) {
             $category = $row["category"];
             if ($cat_param != "" && $category != $cat_param) continue;
-            $id = $row["id"];
             $prod_name = $row["prod_name"];
-            if ($search_item != "" && (!is_numeric(stripos($prod_name, $search_item)) && !is_numeric(stripos($category, $search_item)))) continue;
+            $string_to_search = $prod_name.$category.$row["tags"];
+            if ($search_item != "" && (!is_numeric(stripos($string_to_search, $search_item)))) continue;
+            $id = $row["id"];
             $prod_desc = $row["prod_desc"];
             $price = $row["price"];
             $source = $row["source"];
@@ -39,8 +40,8 @@
                 <div class="card d-flex products-card justify-content-center shadow p-3 mb-5 rounded">
                     <a href="?page=item&id=<?= $id?>"><img class="card-img-top" src="<?= $prod_url?>" alt="Product image" style="width:100%"></a>
                     <div class="card-body">
-                        <a href="?page=item&id=<?= $id?>" class="card-text"><h4 class="card-title" style="height:56px;"><?= $prod_name?></h4></a>
-                        <p class="card-text" style="height: 38px;"><?= substr($prod_desc,0,55)."..."?></p>
+                        <a href="?page=item&id=<?= $id?>" class="card-text"><h4 class="card-title"><?= $prod_name?></h4></a>
+                        <p class="card-text card-description"><?=$prod_desc?></p>
                         <p class="card-text"><?= "\$".sprintf("%.2f",$price)." CAD"?></p>
                         <a href="#" class="btn card-btn">Add to cart</a>
                     </div>

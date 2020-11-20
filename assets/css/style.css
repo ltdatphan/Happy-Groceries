@@ -69,6 +69,29 @@ body {
     color: #212529;
 }
 
+.card-title {
+    font-size: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    @supports not (line-clamp) {
+        height: 56px;
+     }
+}
+
+.card-description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    @supports not (line-clamp) {
+        height: 60px;
+     }
+}
+
 .card-text:hover {
     color: #212529;
     text-decoration: none;
