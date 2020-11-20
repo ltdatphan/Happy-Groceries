@@ -46,6 +46,10 @@
                         <p class="card-text card-description"><?=$prod_desc?></p>
                         <p class="card-text"><?= "\$".sprintf("%.2f",$price)." CAD"?></p>
                         <a href="#" class="btn card-btn">Add to cart</a>
+                        <div class="quantity-input">
+                            <label>Quantity:</label>
+                            <input type="number" name="quantity" size="4" value="1" min="1" max="99"/>
+                        </div>
                     </div>
                 </div>
             </div>

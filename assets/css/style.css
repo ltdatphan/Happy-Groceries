@@ -150,6 +150,14 @@ body {
     border-radius: 20px;
 }
 
+.quantity-input {
+    padding-top: 5px;
+}
+
+.quantity-input > label, .quantity-input > input {
+    font-size: 13px;
+}
+
 /* Adjust logo size */
 #logo {
     height: 50px;
