@@ -2,7 +2,7 @@
     <head>
         <!-- Define your variables here (Only title should be changed! The path variables should stay the same. Feel free to create new variables if needed). -->
         <?php
-        $assetPath = "../assets";
+        $assetPath = "assets";
         $templatePath = "../templates";
         $title = "Hello Groceries";
         ?>
