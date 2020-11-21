@@ -76,9 +76,7 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    @supports not (line-clamp) {
-        height: 56px;
-     }
+    height: 52px;
 }
 
 .card-description {
@@ -232,7 +230,7 @@ body {
 }
 
 .banner-img2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(../img/banner2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(https://image.freepik.com/free-photo/delivery-man-wearing-face-mask-holding-box-with-vegetables_1268-14612.jpg);
     height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
