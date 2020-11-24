@@ -21,13 +21,16 @@
                         <h2><?= $prod_name?></h2>
                         <p class=""><?= substr($prod_desc,0,500)?></p>
                         <p class=""><?= "\$".sprintf("%.2f",$price)." CAD"?></p>
-                        <div>
-                            <a href="#" class="btn card-btn">Add to cart</a>
-                            <div class="quantity-input">
-                                <label>Quantity:</label>
-                                <input type="number" name="quantity" size="4" value="1" min="1" max="99"/>
+                        <form action="?page=cart&action=add" method="POST">
+                            <div>
+                                <input type="submit" class="btn card-btn" value="Add to cart">
+                                <input type="hidden" name="id" value="<?= $id ?>">
+                                <div class="quantity-input">
+                                    <label>Quantity:</label>
+                                    <input type="number" name="quantity" size="4" value="1" min="1" max="99"/>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                         <hr>
                         <h4>Similar Products</h4>
                         <?php

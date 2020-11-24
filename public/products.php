@@ -45,11 +45,16 @@
                         <a href="?page=item&id=<?= $id?>" class="card-text"><h4 class="card-title"><?= $prod_name?></h4></a>
                         <p class="card-text card-description"><?=$prod_desc?></p>
                         <p class="card-text"><?= "\$".sprintf("%.2f",$price)." CAD"?></p>
-                        <a href="#" class="btn card-btn">Add to cart</a>
+                        <form action="?page=cart&action=add" method="POST">
+                            <div>
+                                <input type="submit" class="btn card-btn" value="Add to cart">
+                                <input type="hidden" name="id" value="<?= $id ?>">
                         <div class="quantity-input">
                             <label>Quantity:</label>
                             <input type="number" name="quantity" size="4" value="1" min="1" max="99"/>
                         </div>
+                    </div>
+                        </form>
                     </div>
                 </div>
             </div>

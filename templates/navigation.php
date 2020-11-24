@@ -26,9 +26,9 @@
                 <button class="custom-btn" onclick="search()">
                     <i class="fa fa-search fa-2x"></i>
                 </button>
-                <button class="custom-btn ml-auto mr-auto">
+                <a class="custom-btn ml-auto mr-auto" href='?page=cart'>
                     <i class="fa fa-shopping-cart fa-2x"></i>
-                </button>
+                </a>
             </div>
             <div>
                 <button class="navbar-toggler category-toggle" type="button" data-toggle="collapse" data-target="#categoryItems" aria-controls="categoryItems" aria-expanded="false" aria-label="Toggle navigation">
