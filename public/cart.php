@@ -4,7 +4,7 @@
 
 function isValidProduct($link, $product_id)
 {
-    return mysqli_query($link, "SELECT * FROM products WHERE id = $product_id");
+    return mysqli_num_rows(mysqli_query($link, "SELECT * FROM Products WHERE id = $product_id")) > 0;
 }
 
 $action = $_GET['action'] ?? 'show';
@@ -53,7 +53,7 @@ $_SESSION['cart'] = array_filter($_SESSION['cart'], function ($var) {
 if (!empty($_SESSION['cart'])) {
     $cart_ids_string = implode(',', $cart_ids = array_keys($_SESSION['cart']));
 
-    $result = mysqli_query($conn, "SELECT * FROM products WHERE id in ($cart_ids_string)");
+    $result = mysqli_query($conn, "SELECT * FROM Products WHERE id in ($cart_ids_string)");
 }
 
 
