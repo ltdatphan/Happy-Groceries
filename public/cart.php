@@ -13,11 +13,6 @@ function isValidProduct($link, $product_id)
     return $query->get_result();
 }
 
-function clearZeroQuantity()
-{
-    
-}
-
 $action = $_GET['action'] ?? 'show';
 
 if (isset($_POST['id']) && !isValidProduct($conn, (int)$_POST['id'])) {
@@ -61,87 +56,93 @@ $_SESSION['cart'] = array_filter($_SESSION['cart'], function ($var) {
     return $var > 0;
 });
 
+if (!empty($_SESSION['cart'])) {
+    $cart_ids_string = implode(',', $cart_ids = array_keys($_SESSION['cart']));
 
-$cart_ids_string = implode(',', $cart_ids = array_keys($_SESSION['cart']));
+    $query = $conn->prepare("SELECT * FROM products WHERE id in ($cart_ids_string)");
 
-$query = $conn->prepare("SELECT * FROM products WHERE id in ($cart_ids_string)");
+    $query->execute();
 
-$query->execute();
+    $result = $query->get_result();
+}
 
-$result = $query->get_result();
 
 $subtotal = 0.0;
 
 ?>
 <script>
-    if ( window.history.replaceState ) {
-        window.history.replaceState( null, null, window.location.href.split("&")[0] );
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href.split("&")[0]);
     }
 </script>
 <div class="container">
     <h1 class="title-header">Shopping Cart</h1>
-    <div class="row">
-        <div class="col">
-            <table id="cart">
-                <thead>
+    <?php if (empty($_SESSION['cart'])) : ?>
+        <h2>Your Shopping Cart is Empty</h2>
+    <?php else : ?>
+        <div class="row">
+            <div class="col">
+                <table id="cart">
+                    <thead>
 
-                </thead>
-                <tbody>
-                    <?php
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        extract($row);
-                        $quantity = $_SESSION['cart'][$id];
-                        $subtotal += $price * $quantity;
-                    ?>
-                        <tr>
-                            <td class='min'>
-                                <a href="?page=item&id=<?= $id ?>"><img src="<?= $prod_url ?>" alt="Product image" width="150"></a>
-                            </td>
-                            <td>
-                                <a class='product-name' href="?page=item&id=<?= $id ?>"><?= $prod_name ?></a>
-                            </td>
-                            <td>
-                                <div class='product-container'>
-                                    <form class='quantity-form' action="?page=cart&action=set" method="POST">
+                    </thead>
+                    <tbody>
+                        <?php
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            extract($row);
+                            $quantity = $_SESSION['cart'][$id];
+                            $subtotal += $price * $quantity;
+                        ?>
+                            <tr>
+                                <td class='min'>
+                                    <a href="?page=item&id=<?= $id ?>"><img src="<?= $prod_url ?>" alt="Product image" width="150"></a>
+                                </td>
+                                <td>
+                                    <a class='product-name' href="?page=item&id=<?= $id ?>"><?= $prod_name ?></a>
+                                </td>
+                                <td>
+                                    <div class='product-container'>
+                                        <form class='quantity-form' action="?page=cart&action=set" method="POST">
+                                            <input name="id" type="hidden" value="<?= $id ?>">
+                                            <div>
+                                                <label class="quantity-label">Quantity:</label>
+                                                <select class="quantity-select form-control form-control-sm" name="quantity" onchange='this.form.submit()'>
+                                                    <option value="0">0 (Remove)</option>
+                                                    <?php for ($i = 1; $i < 100; $i++) : ?>
+                                                        <option value="<?= $i ?>" <?= $i === $quantity ? 'selected="selected"' : ''; ?>><?= $i ?></option>
+                                                    <?php endfor; ?>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="price"><?= "\$" . sprintf("%.2f", $price) . " CAD" ?></p>
+                                </td>
+                                <td class="min">
+                                    <form class='remove-form' action="?page=cart&action=remove" method="POST">
                                         <input name="id" type="hidden" value="<?= $id ?>">
-                                        <div>
-                                            <label class="quantity-label">Quantity:</label>
-                                            <select class="quantity-select form-control form-control-sm" name="quantity" onchange='this.form.submit()'>
-                                                <option value="0">0 (Remove)</option>
-                                                <?php for ($i = 1; $i < 100; $i++) : ?>
-                                                    <option value="<?= $i ?>" <?= $i === $quantity ? 'selected="selected"' : ''; ?>><?= $i ?></option>
-                                                <?php endfor; ?>
-                                            </select>
-                                        </div>
+                                        <button class='btn'><i class="fa fa-times"></i></button>
                                     </form>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="price"><?= "\$" . sprintf("%.2f", $price) . " CAD" ?></p>
-                            </td>
-                            <td class="min">
-                                <form class='remove-form' action="?page=cart&action=remove" method="POST">
-                                    <input name="id" type="hidden" value="<?= $id ?>">
-                                    <button class='btn'><i class="fa fa-times"></i></button>
-                                </form>
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="10">
+                                Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b>
                             </td>
                         </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="10">
-                            Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col-3">
+                <p>Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b></p>
+                <button class='btn btn-primary'>Go to Checkout</button>
+            </div>
         </div>
-        <div class="col-3">
-            <p>Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b></p>
-            <button class='btn btn-primary'>Go to Checkout</button>
-        </div>
-    </div>
+    <?php endif; ?>
 </div>
