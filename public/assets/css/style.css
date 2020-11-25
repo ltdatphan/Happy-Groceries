@@ -341,5 +341,10 @@ body {
     .custom-footer p, li {
         font-size: 18px;
     }
+
+    #categoryItems > div > a {
+        width: 100%;
+        text-align: center;
+    }
     
 }
