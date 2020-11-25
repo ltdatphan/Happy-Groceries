@@ -185,6 +185,7 @@ body {
     margin-right: 30px;
     border: 0;
     color: black;
+    text-decoration: none;
 }
 
 .category-toggle {
