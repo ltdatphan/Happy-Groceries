@@ -35,8 +35,8 @@
                     <h5 style="color: black;">Categories</h5>
                 </button>
                 <div id="categoryItems" class="collapse navbar-collapse">
-                    <div class="navbar-nav">
-                        <a href="?page=products" class="nav-item nav-link <?=isset($_GET['page'])&&$_GET['page']=='products'&&!isset($_GET['category'])?'active-link':''?>">All Products</a>
+                    <div class="navbar-nav" style="width:100%">
+                        <a id="firstCategoryItem" href="?page=products" class="nav-item nav-link <?=isset($_GET['page'])&&$_GET['page']=='products'&&!isset($_GET['category'])?'active-link':''?>">All Products</a>
                         <a href="?page=products&category=produce" class="nav-item nav-link <?=isset($_GET['category'])&&$_GET['category']=='produce'?'active-link':''?>">Produce</a>
                         <a href="?page=products&category=meats" class="nav-item nav-link <?=isset($_GET['category'])&&$_GET['category']=='meats'?'active-link':''?>">Meats</a>
                         <a href="?page=products&category=dairy" class="nav-item nav-link <?=isset($_GET['category'])&&$_GET['category']=='dairy'?'active-link':''?>">Dairy</a>

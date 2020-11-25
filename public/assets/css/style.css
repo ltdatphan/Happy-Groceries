@@ -126,6 +126,16 @@ body {
     font-size: 20px;
 }
 
+/* Spacing for Nav items */
+#navbarItems > div > a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#categoryItems > div > a {
+    width: 16.6%;
+}
+
 #categoryItems {
     border-radius: 20px;
     padding: 0 25px;
@@ -240,7 +250,8 @@ body {
 /* For home page */
 .banner-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1506617564039-2f3b650b7010?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
-    height: 525px;
+    height: 625px;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -252,6 +263,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    background-position: center;
 }
 
 .banner-img h1{
