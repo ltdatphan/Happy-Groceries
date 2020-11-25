@@ -31,7 +31,6 @@ $conn = mysqli_connect($host, $username, $password, $database) or die("Cannot co
 $sql = "SELECT * FROM Products ORDER BY category DESC";
 
 echo "<div style='background-color: rgb(255,253,250);'>";
-var_dump($_SERVER);
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
