@@ -1,3 +1,5 @@
+<?php include '../templates/cartProcessing.php'; ?>
+
 <div class="container">
     <?php
         $id_param = $_GET['id'];
@@ -20,7 +22,7 @@
                     <h2><?= $prod_name?></h2>
                     <p class=""><?= $prod_desc?></p>
                     <p class=""><?= "\$".sprintf("%.2f",$price)." CAD"?></p>
-                    <form action="?page=cart&action=add" method="POST">
+                    <form action="?page=item&id=<?=$id_param?>&action=add" method="POST">
                         <div>
                             <input type="submit" class="btn card-btn" value="Add to cart">
                             <input type="hidden" name="id" value="<?= $id_param ?>">
