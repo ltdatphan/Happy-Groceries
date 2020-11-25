@@ -10,8 +10,8 @@
                 <br>
                 <h2>Contact us</h2>
                 <ul class="icon-list">
-                    <li><i class="custom-icon fa fa-phone fa-lg"></i> 123-456-7894</li>
-                    <li><i class="custom-icon fa fa-envelope"></i> support@happygroceries.com</li>
+                    <li><i class="custom-icon fa fa-phone fa-lg" style="font-size: 30px;"></i> 123-456-7894</li>
+                    <li><i class="custom-icon fa fa-envelope" style="font-size: 23px;"></i> support@happygroceries.com</li>
                 </ul>
 
             </div>
