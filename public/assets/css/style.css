@@ -312,8 +312,8 @@ body {
         width: 100%;  
     }
 
-    .custom-btn{
-        margin-right: 0;
+    .custom-btn, .custom-btn:hover {
+        margin-right: 5px;
     }
 
     .category-toggle {
