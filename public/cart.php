@@ -87,7 +87,7 @@ $subtotal = 0.0;
                                 <h5 class="card-title" style="height:auto"><?=$row["prod_name"]?></h5>
                                 <p class="card-description"><?=$row["prod_desc"]?></p>
                             </div>
-                            <div class="d-flex card-body cart-body align-items-center">
+                            <div class="d-flex card-body cart-body justify-content-end align-items-center">
                                 <label class="quantity-label">Quantity:</label>
                                 <select class="quantity-select form-control form-control-sm" name="quantity" onchange='this.form.submit()'>
                                     <option value="0">0 (Remove)</option>
@@ -108,7 +108,7 @@ $subtotal = 0.0;
                     <?php }?>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-sm-3">
                 <p>Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b></p>
                 <button class='btn card-btn'>Go to Checkout</button>
             </div>
