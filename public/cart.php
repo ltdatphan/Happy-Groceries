@@ -88,13 +88,18 @@ $subtotal = 0.0;
                                 <p class="card-description"><?=$row["prod_desc"]?></p>
                             </div>
                             <div class="d-flex card-body cart-body justify-content-end align-items-center">
-                                <label class="quantity-label">Quantity:</label>
-                                <select class="quantity-select form-control form-control-sm" name="quantity" onchange='this.form.submit()'>
-                                    <option value="0">0 (Remove)</option>
-                                    <?php for ($i = 1; $i < 100; $i++) : ?>
-                                        <option value="<?= $i ?>" <?= $i === $quantity ? 'selected="selected"' : ''; ?>><?= $i ?></option>
-                                    <?php endfor; ?>
-                                </select>
+                                <form class='quantity-form' action="?page=cart&action=set" method="POST">
+                                    <input name="id" type="hidden" value="<?= $id ?>">
+                                    <div>
+                                        <label class="quantity-label">Quantity:</label>
+                                        <select class="quantity-select form-control form-control-sm" name="quantity" onchange='this.form.submit()'>
+                                            <option value="0">0 (Remove)</option>
+                                            <?php for ($i = 1; $i < 100; $i++) : ?>
+                                                <option value="<?= $i ?>" <?= $i === $quantity ? 'selected="selected"' : ''; ?>><?= $i ?></option>
+                                            <?php endfor; ?>
+                                        </select>
+                                    </div>
+                                </form>
                             </div>
                             <div class="d-flex card-body cart-body justify-content-end align-items-center">
                                 <p class="price"><?= "\$" . sprintf("%.2f", $price) . " CAD" ?></p>
