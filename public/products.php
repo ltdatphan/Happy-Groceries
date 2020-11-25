@@ -1,3 +1,5 @@
+<?php include '../templates/cartProcessing.php'; ?>
+
 <div class="container">
     <?php
         /* Category gotten from the query string */
@@ -45,7 +47,7 @@
                         <a href="?page=item&id=<?= $id?>" class="card-text"><h4 class="card-title"><?= $prod_name?></h4></a>
                         <p class="card-text card-description"><?=$prod_desc?></p>
                         <p class="card-text"><?= "\$".sprintf("%.2f",$price)." CAD"?></p>
-                        <form action="?page=cart&action=add" method="POST">
+                        <form action="?page=products<?=isset($_GET["category"])?'&category='.$_GET['category']:''?>&action=add" method="POST">
                             <div>
                                 <input type="submit" class="btn card-btn" value="Add to cart">
                                 <input type="hidden" name="id" value="<?= $id ?>">

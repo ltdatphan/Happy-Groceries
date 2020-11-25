@@ -1,6 +1,10 @@
 <?php
 session_start();
 include '../templates/header.php';
+if (isset($_SESSION['cart']))
+    echo "<script> updateCartBadge(".count(array_keys($_SESSION['cart']))."); </script>";
+else
+    echo "<script> updateCartBadge(0); </script>";
 
 switch ($_SERVER["SERVER_NAME"]) {
     case 'webdev.scs.ryerson.ca':

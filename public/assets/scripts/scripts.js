@@ -18,3 +18,7 @@ function unfocused() {
         document.getElementById("search-bar").style.color="rgb(125,125,125)";
     }
 }
+
+function updateCartBadge(num) {
+    document.getElementById("cart-badge").innerHTML = num;
+}

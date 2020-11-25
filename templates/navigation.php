@@ -27,7 +27,7 @@
                     <i class="fa fa-search fa-2x"></i>
                 </button>
                 <a class="custom-btn ml-auto mr-auto" href='?page=cart'>
-                    <i class="fa fa-shopping-cart fa-2x"></i>
+                    <i class="fa fa-shopping-cart fa-2x"><span id="cart-badge" class="badge badge-pill badge-dark" style="margin-left:5px;">0</span></i>
                 </a>
             </div>
             <div>
