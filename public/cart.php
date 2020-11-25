@@ -84,7 +84,7 @@ $subtotal = 0.0;
                         <div class="row no-gutters">
                             <a href="?page=item&id=<?= $id ?>"><img src="<?= $prod_url ?>" alt="Product image" style="width:150px;"></a>
                             <div class="card-body cart-body">
-                                <h5 class="card-title" style="height:auto"><?=$row["prod_name"]?></h5>
+                                <a href="?page=item&id=<?= $id ?>" class="card-text"><h5 class="card-title" style="height:auto"><?=$row["prod_name"]?></h5></a>
                                 <p class="card-description"><?=$row["prod_desc"]?></p>
                             </div>
                             <div class="d-flex card-body cart-body justify-content-end align-items-center">
