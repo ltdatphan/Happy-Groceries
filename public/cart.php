@@ -4,7 +4,7 @@
 
 function isValidProduct($link, $product_id)
 {
-    return mysqli_query($link, "SELECT * FROM products WHERE id = $product_id");
+    return mysqli_query($link, "SELECT * FROM Products WHERE id=$product_id");
 }
 
 $action = $_GET['action'] ?? 'show';
@@ -53,7 +53,7 @@ $_SESSION['cart'] = array_filter($_SESSION['cart'], function ($var) {
 if (!empty($_SESSION['cart'])) {
     $cart_ids_string = implode(',', $cart_ids = array_keys($_SESSION['cart']));
 
-    $result = mysqli_query($conn, "SELECT * FROM products WHERE id in ($cart_ids_string)");
+    $result = mysqli_query($conn, "SELECT * FROM Products WHERE id in ($cart_ids_string) ORDER BY prod_name");
 }
 
 
@@ -65,73 +65,52 @@ $subtotal = 0.0;
         window.history.replaceState(null, null, window.location.href.split("&")[0]);
     }
 </script>
-<div class="container">
+<div class="container custom-page" style="text-align:center">
     <h1 class="title-header">Shopping Cart</h1>
     <?php if (empty($_SESSION['cart'])) : ?>
-        <h2>Your Shopping Cart is Empty</h2>
+        <h4>Your shopping cart is empty!</h4>
+        <a href="?page=products" class="btn card-btn" >Shop now</a>
     <?php else : ?>
         <div class="row">
             <div class="col">
-                <table id="cart">
-                    <thead>
-
-                    </thead>
-                    <tbody>
-                        <?php
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            extract($row);
-                            $quantity = $_SESSION['cart'][$id];
-                            $subtotal += $price * $quantity;
-                        ?>
-                            <tr>
-                                <td class='min'>
-                                    <a href="?page=item&id=<?= $id ?>"><img src="<?= $prod_url ?>" alt="Product image" width="150"></a>
-                                </td>
-                                <td>
-                                    <a class='product-name' href="?page=item&id=<?= $id ?>"><?= $prod_name ?></a>
-                                </td>
-                                <td>
-                                    <div class='product-container'>
-                                        <form class='quantity-form' action="?page=cart&action=set" method="POST">
-                                            <input name="id" type="hidden" value="<?= $id ?>">
-                                            <div>
-                                                <label class="quantity-label">Quantity:</label>
-                                                <select class="quantity-select form-control form-control-sm" name="quantity" onchange='this.form.submit()'>
-                                                    <option value="0">0 (Remove)</option>
-                                                    <?php for ($i = 1; $i < 100; $i++) : ?>
-                                                        <option value="<?= $i ?>" <?= $i === $quantity ? 'selected="selected"' : ''; ?>><?= $i ?></option>
-                                                    <?php endfor; ?>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="price"><?= "\$" . sprintf("%.2f", $price) . " CAD" ?></p>
-                                </td>
-                                <td class="min">
-                                    <form class='remove-form' action="?page=cart&action=remove" method="POST">
-                                        <input name="id" type="hidden" value="<?= $id ?>">
-                                        <button class='btn'><i class="fa fa-times"></i></button>
-                                    </form>
-                                </td>
-                            </tr>
-                        <?php
-                        }
-                        ?>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="10">
-                                Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <div class="cart">
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        extract($row);
+                        $quantity = $_SESSION['cart'][$id];
+                        $subtotal += $price * $quantity;
+                    ?>
+                    <div class="card cart d-flex products-card shadow p-3 mb-5 rounded">
+                        <div class="row no-gutters">
+                            <a href="?page=item&id=<?= $id ?>"><img src="<?= $prod_url ?>" alt="Product image" style="width:150px;"></a>
+                            <div class="card-body cart-body">
+                                <h5 class="card-title" style="height:auto"><?=$row["prod_name"]?></h5>
+                                <p class="card-description"><?=$row["prod_desc"]?></p>
+                            </div>
+                            <div class="d-flex card-body cart-body align-items-center">
+                                <label class="quantity-label">Quantity:</label>
+                                <select class="quantity-select form-control form-control-sm" name="quantity" onchange='this.form.submit()'>
+                                    <option value="0">0 (Remove)</option>
+                                    <?php for ($i = 1; $i < 100; $i++) : ?>
+                                        <option value="<?= $i ?>" <?= $i === $quantity ? 'selected="selected"' : ''; ?>><?= $i ?></option>
+                                    <?php endfor; ?>
+                                </select>
+                            </div>
+                            <div class="d-flex card-body cart-body justify-content-end align-items-center">
+                                <p class="price"><?= "\$" . sprintf("%.2f", $price) . " CAD" ?></p>
+                                <form class='remove-form' action="?page=cart&action=remove" method="POST">
+                                    <input name="id" type="hidden" value="<?= $id ?>">
+                                    <button class='btn'><i class="fa fa-times"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <?php }?>
+                </div>
             </div>
             <div class="col-3">
                 <p>Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b></p>
-                <button class='btn btn-primary'>Go to Checkout</button>
+                <button class='btn card-btn'>Go to Checkout</button>
             </div>
         </div>
     <?php endif; ?>

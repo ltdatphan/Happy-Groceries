@@ -95,25 +95,14 @@ body {
     text-decoration: none;
 }
 
-.card-btn {
+.card-btn, .card-btn:hover {
     background-color: #202020;
-    color: rgb(200, 200, 200);
-}
-
-.card-btn:hover {
     color: white;
-    background-color: rgb(60,60,70);
     outline: none;
 }
 
 .card-btn:active {
-    color: white;
     background-color: black;
-}
-
-.card-btn:active {
-    background-color: black;
-    color: white;
 }
 
 .products-card p {
@@ -178,7 +167,7 @@ body {
     outline-width: 0;
 }
 
-.custom-btn, .custom-btn:active {
+.custom-btn, .custom-btn:active, .custom-btn:hover {
     height: 50px;
     background: greenyellow;
     padding: 10px;
@@ -198,53 +187,32 @@ body {
     font-size: 20px;
 }
 
-#checkout-box {
-    background-color: white;
-}
-
-#cart {
+.cart {
     width: 100%;
     margin-bottom: 50px;
 }
 
-#cart tr {
-    border-top: lightgray 1px solid;
+.cart-card {
+    display: flex;
 }
 
-.product-name {
-    font-weight: bold;
-    font-size: 1.2em;
+.cart-body {
+    flex: 1 1 0;
 }
 
-#cart .product-container {
-    display: grid;
-}
-
-#cart img {
-    width: 150px;
-    margin-right: 20px;
-}
-
-#cart tfoot {
-    text-align: right;
-}
-
-#cart .quantity-form {
-    margin-bottom: 0;
-}
-
-#cart .quantity-select {
+.quantity-select {
     width: auto;
     display: inline;
 }
 
-#cart .price {
-    text-align: right;
+.quantity-label {
+    padding: .375rem .75rem
 }
 
-td.min {
-    width: 0;
-    white-space: nowrap;
+.price {
+    text-align: right;
+    padding: .375rem .75rem;
+    font-size: 1rem !important;
 }
 
 /* Footer */
@@ -271,7 +239,7 @@ td.min {
 
 /* For home page */
 .banner-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(https://images.unsplash.com/photo-1506617564039-2f3b650b7010?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1506617564039-2f3b650b7010?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
     height: 525px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -279,7 +247,7 @@ td.min {
 }
 
 .banner-img2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(https://image.freepik.com/free-photo/delivery-man-wearing-face-mask-holding-box-with-vegetables_1268-14612.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://image.freepik.com/free-photo/delivery-man-wearing-face-mask-holding-box-with-vegetables_1268-14612.jpg);
     height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -306,6 +274,10 @@ td.min {
     font-size: 1.5em;
     color: black;
     border: none;
+}
+
+.custom-page {
+    padding-bottom: 30px;
 }
 
 
