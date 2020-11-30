@@ -1,9 +1,4 @@
 <?php $subtotal = 0.0 ?>
-<script>
-    if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href.split("&")[0]);
-    }
-</script>
 <div class="container custom-page" style="text-align:center">
     <h1 class="title-header">Shopping Cart</h1>
     <?php if (empty($_SESSION['cart'])) : ?>
