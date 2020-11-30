@@ -54,7 +54,3 @@ if (!empty($_SESSION['cart'])) {
 
     $result = mysqli_query($conn, "SELECT * FROM Products WHERE id in ($cart_ids_string) ORDER BY prod_name");
 }
-
-echo "<script> updateCartBadge(".count(array_keys($_SESSION['cart']))."); </script>";
-
-?>

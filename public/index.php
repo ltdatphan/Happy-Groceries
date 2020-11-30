@@ -1,10 +1,9 @@
 <?php
 session_start();
-include '../templates/header.php';
-if (isset($_SESSION['cart']))
-    echo "<script> updateCartBadge(".count(array_keys($_SESSION['cart']))."); </script>";
-else
-    echo "<script> updateCartBadge(0); </script>";
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 switch ($_SERVER["SERVER_NAME"]) {
     case 'webdev.scs.ryerson.ca':
@@ -34,11 +33,10 @@ $conn = mysqli_connect($host, $username, $password, $database) or die("Cannot co
 //Retrieve list of products
 $sql = "SELECT * FROM Products ORDER BY category DESC";
 
-echo "<div style='background-color: rgb(255,253,250);'>";
+include '../src/cartProcessing.php';
+include '../templates/header.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+echo "<div style='background-color: rgb(255,253,250);'>";
 
 // Router
 $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'home';

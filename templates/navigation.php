@@ -28,7 +28,7 @@
                     <i class="fa fa-search fa-2x"></i>
                 </button>
                 <a class="custom-btn ml-auto mr-auto d-flex align-items-center" href='?page=cart'>
-                    <i class="fa fa-shopping-cart fa-2x"><span id="cart-badge" class="badge badge-pill cart-badge badge-dark">0</span></i>
+                    <i class="fa fa-shopping-cart fa-2x"><span id="cart-badge" class="badge badge-pill cart-badge badge-dark"><?= count($_SESSION['cart'] ?? []) ?></span></i>
                 </a>
             </div>
             <div>

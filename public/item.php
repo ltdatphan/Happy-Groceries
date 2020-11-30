@@ -1,5 +1,3 @@
-<?php include '../templates/cartProcessing.php'; ?>
-
 <div class="container">
     <?php
         $id_param = $_GET['id'];

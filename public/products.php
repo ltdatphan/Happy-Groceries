@@ -1,5 +1,3 @@
-<?php include '../templates/cartProcessing.php'; ?>
-
 <div class="container">
     <?php
         /* Category gotten from the query string */
