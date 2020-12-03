@@ -49,7 +49,7 @@
             </div>
             <div class="col-sm-3">
                 <p>Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b></p>
-                <button class='btn card-btn'>Go to Checkout</button>
+                <a href="?page=checkout" class='btn card-btn'>Proceed to Checkout</a>
             </div>
         </div>
     <?php endif; ?>
