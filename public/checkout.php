@@ -51,4 +51,5 @@
         </div>
     </div>
     <h3>Thank you for shopping with us!</h3>
+    <?php unset($_SESSION['cart']);?>
 </div>
