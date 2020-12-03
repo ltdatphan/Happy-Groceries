@@ -298,6 +298,7 @@ body {
 
 .custom-page {
     padding-bottom: 30px;
+    min-height: 700px;
 }
 
 .social-btn {
