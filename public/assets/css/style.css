@@ -309,6 +309,28 @@ body {
     font-size: 25px;
 }
 
+.contact-info > span{
+    font-size: 20px;
+    color: black;
+}
+
+.contact-card {
+    border-radius: 25px;
+    padding: 35px;
+    border: none;
+    height: 100%;
+}
+
+.responsive-map {
+    overflow:hidden;
+    position: relative;
+}
+
+.responsive-map > iframe {
+    height:38.9vh;
+    width:100%;
+    border-radius: 25px;
+}
 
 /* For mobile devices */
 @media only screen and (max-width: 386px) {
@@ -316,7 +338,7 @@ body {
     .custom-footer li {
         font-size: 14px;
     }
-    
+
 }
 
 @media only screen and (max-width: 450px) {
