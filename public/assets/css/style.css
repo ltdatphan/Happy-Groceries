@@ -300,6 +300,14 @@ body {
     padding-bottom: 30px;
 }
 
+.social-btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.about-text {
+    font-size: 25px;
+}
 
 
 /* For mobile devices */
