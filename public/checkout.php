@@ -1,6 +1,10 @@
 <?php $subtotal = 0.0 ?>
 <div class="container custom-page" style="text-align:center">
     <h1 class="title-header">Checkout</h1>
+    <?php if (empty($_SESSION['cart'])) : ?>
+        <h4>You recently checked out! Your shopping cart is empty!</h4>
+        <a href="?page=products" class="btn card-btn" >Shop now</a>
+    <?php else : ?>
     <div class="row">
         <div class="col">
             <div class="cart">
@@ -52,4 +56,5 @@
     </div>
     <h3>Thank you for shopping with us!</h3>
     <?php unset($_SESSION['cart']);?>
+    <?php endif; ?>
 </div>
