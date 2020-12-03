@@ -6,7 +6,7 @@
         <div class="col-6 col-md-3">
             <div class="card">
                 <!--Profile img-->
-            <img class="card-img-top" src="https://avatars2.githubusercontent.com/u/20921411?s=88&v=4">
+                <img class="card-img-top" src="https://avatars2.githubusercontent.com/u/20921411?s=88&v=4">
                 <div class="card-body">
                     <!-- Name -->
                     <h5 class="card-title">Name</h5>
@@ -21,7 +21,7 @@
         <!-- Second card -->
         <div class="col-6 col-md-3">
             <div class="card">
-            <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/40791721?s=88&v=4">
+                <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/40791721?s=88&v=4">
                 <div class="card-body">
                     <h5 class="card-title">Name</h5>
                     <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut  "</p>
@@ -34,7 +34,7 @@
         <!-- Third card -->
         <div class="col-6 col-md-3">
             <div class="card">
-            <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/48210360?s=88&v=4">
+                <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/48210360?s=88&v=4">
                 <div class="card-body">
                     <h5 class="card-title">Name</h5>
                     <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut  "</p>
@@ -47,7 +47,7 @@
         <!-- Fourth card -->
         <div class="col-6 col-md-3">
             <div class="card">
-            <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/37843657?s=88&v=4">
+                <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/37843657?s=88&v=4">
                 <div class="card-body">
                     <h5 class="card-title">Name</h5>
                     <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut  "</p>
