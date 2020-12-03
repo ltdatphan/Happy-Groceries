@@ -26,7 +26,7 @@
             </div>
             <div class="col-6 col-md-3">
                 <h3>Quick Links</h3>
-                <a href="#" class="footer-links">About Us</a>
+                <a href="?page=about" class="footer-links">About Us</a>
                 <a href="#" class="footer-links">Contact</a>
                 <a href="#" class="footer-links">Support</a>
                 <a href="#" class="footer-links">Sign Up</a>
