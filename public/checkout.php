@@ -21,13 +21,11 @@
                             <a href="?page=item&id=<?= $id ?>" class="card-text">
                                 <h5 class="align-items-center" style="height:100%, align-items-center"><?=$row["prod_name"]?></h5>
                             </a>
-                            <!-- <p class="card-description"><?=$row["prod_desc"]?></p> -->
                         </div>
                         <div class="d-flex card-body cart-body align-items-center">
                             <div>
                                 <label class="quantity-label">Quantity:</label>
                                 <?php echo $quantity ?>
-                                <!-- </select> -->
                             </div>
                         </div>
                         <div class="d-flex card-body cart-body justify-content-end align-items-center">

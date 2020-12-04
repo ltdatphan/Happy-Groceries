@@ -3,6 +3,7 @@
     <h5>Want to give us feedback on your purchase or ask us any questions? Don't hesitate! Contact us today!</h5>
     <br><br>
     
+    <!-- Contact cards-->
     <div class="row">
         <div class="col-md-6">
             <div class="contact-info card contact-card shadow">
@@ -22,6 +23,8 @@
         </div>
     </div>   
     <br> 
+
+    <!-- Google Maps embed -->
     <div class="responsive-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.543823064969!2d-79.38099574825291!3d43.65765847901859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb35431c1395%3A0xe8ed8bd69125d6f4!2sRyerson%20University!5e0!3m2!1sen!2sca!4v1606974017613!5m2!1sen!2sca" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
