@@ -301,6 +301,13 @@ body {
 }
 
 /*For recipe page*/
+.recipe-title{
+    text-align:center;
+}
+.recipe-search{
+    margin-left: 450px;
+    width:300px;
+}
 
 
 
@@ -351,3 +358,10 @@ body {
     }
     
 }
+
+
+
+
+
+
+
