@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container custom-page">
     <?php
         /* Read ID from query string and retrieve product info from mySQL server*/
         $id_param = $_GET['id'];

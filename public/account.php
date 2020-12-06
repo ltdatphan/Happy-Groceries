@@ -5,8 +5,7 @@ $user = mysqli_fetch_assoc($user_results);
 
 $order_results = mysqli_query($conn, "SELECT * FROM Orders WHERE email='{$_SESSION['user']['email']}'");
 ?>
-<div class="container">
-    <h1 class="title-header">Account</h1>
+<div class="container custom-page">
     <div class="row">
         <div class="col-5">
             <h2>Account Info</h2>
