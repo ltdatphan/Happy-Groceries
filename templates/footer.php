@@ -30,9 +30,14 @@
             <div class="col-6 col-md-3">
                 <h3>Quick Links</h3>
                 <a href="?page=about" class="footer-links">About Us</a>
-                <a href="?page=contact" class="footer-links">Contact</a>
-                <a href="#" class="footer-links">Sign Up</a>
-                <a href="#" class="footer-links">Login</a>
+                <a href="?page=contact" class="footer-links">Contact Us</a>
+                <?php if (empty($_SESSION['user'])): ?>
+                    <a href="?page=signup" class="footer-links">Sign Up</a>
+                    <a href="?page=login" class="footer-links">Log In</a>
+                <?php else: ?>
+                    <a href="?page=account" class="footer-links">Account</a>
+                    <a href="?page=logout" class="footer-links">Log Out</a>
+                <?php endif; ?>
             </div>
         </div>
         <hr>
