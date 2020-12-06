@@ -23,11 +23,11 @@
         <div class="form-row">
             <div class="col">
                 <label for="firstname-input">First Name</label>
-                <input name="first_name" type="text" class="form-control" placeholder="First name" required>
+                <input name="fname" type="text" class="form-control" placeholder="First name" required>
             </div>
             <div class="col">
                 <label for="lastname-input">Last Name</label>
-                <input name="last_name" type="text" class="form-control" placeholder="Last name" required>
+                <input name="lname" type="text" class="form-control" placeholder="Last name" required>
             </div>
         </div>
         <div class="form-group">
