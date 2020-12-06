@@ -2,17 +2,19 @@
     <div class="container">
         <div class="grid" style="width: 100%;">
             <div class="row">
+                <!-- Page Logo and Home button -->
                 <a class="navbar-brand" href="?page=home">
                     <img id="logo" src="<?= $assetPath?>/img/flat-logo.png">
                 </a>
+                <!-- Bootstrap toggle to open menu in mobile view-->
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Links to general pages-->
                 <div id="navbarItems" class="collapse navbar-collapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="#" class="nav-item nav-link">About us</a>
-                        <a href="#" class="nav-item nav-link">Contact</a>
-                        <a href="#" class="nav-item nav-link">Support</a>
+                        <a href="?page=about" class="nav-item nav-link">About us</a>
+                        <a href="?page=contact" class="nav-item nav-link">Contact</a>
                         <?php if (empty($_SESSION['user'])): ?>
                             <a href="?page=signup" class="nav-item nav-link">Sign up</a>
                             <a href="?page=login" class="nav-item nav-link">Log in</a>
@@ -24,11 +26,13 @@
                 </div>
             </div>
             <div style="display: flex;">
+                <!-- Search bar-->
                 <form style="width: 70%;" id="search-form" autocomplete="off" method="get">
                     <input type='hidden' name='page' value='products'>
                     <input id="search-bar" type="text" name="item" value="Search..." onfocus="focused()" onblur="unfocused()" style="color:rgb(125,125,125)">
                 </form>
                 <div></div>
+                <!-- Search and cart buttons-->
                 <button class="custom-btn" onclick="search()">
                     <i class="fa fa-search fa-2x"></i>
                 </button>
@@ -37,9 +41,11 @@
                 </a>
             </div>
             <div>
+                <!-- Toggle for categories-->
                 <button class="navbar-toggler category-toggle" type="button" data-toggle="collapse" data-target="#categoryItems" aria-controls="categoryItems" aria-expanded="false" aria-label="Toggle navigation">
                     <h5 style="color: black;">Categories</h5>
                 </button>
+                <!-- Buttons to view different categories -->
                 <div id="categoryItems" class="collapse navbar-collapse">
                     <div class="navbar-nav" style="width:100%">
                         <a id="firstCategoryItem" href="?page=products" class="nav-item nav-link <?=isset($_GET['page'])&&$_GET['page']=='products'&&!isset($_GET['category'])?'active-link':''?>">All Products</a>
