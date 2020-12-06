@@ -13,19 +13,19 @@ function isValidPassword($password)
 {
     global $errors;
     if (strlen($password) < 6) {
-        $errors[] = 'Password must have at least 6 characters.';
+        $errors[] = 'Password must be at least 6 characters long.';
         return false;
     }
     return true;
 }
 
-function validateUser($dbConn, $email, $password_1, $password_2, $first_name, $last_name)
+function validateUser($dbConn, $email, $password_1, $password_2, $fname, $lname)
 {
     global $errors;
     $result = mysqli_query($dbConn, "SELECT * FROM Users WHERE email = '$email'");
 
     if (mysqli_num_rows($result) > 0) {
-        $errors[] = 'The email address provided is already registered.';
+        $errors[] = 'The provided email address is already registered.';
         return false;
     }
 
@@ -40,11 +40,11 @@ function validateUser($dbConn, $email, $password_1, $password_2, $first_name, $l
     return true;
 }
 
-function registerUser($dbConn, $email, $password_1, $first_name, $last_name)
+function registerUser($dbConn, $email, $password_1, $fname, $lname)
 {
     global $errors;
     $password_hash = password_hash($password_1, PASSWORD_DEFAULT);
-    $result = mysqli_query($dbConn, "INSERT INTO Users (email, `password`, firstname, lastname) VALUES ('$email', '$password_hash', '$first_name', '$last_name');");
+    $result = mysqli_query($dbConn, "INSERT INTO Users (email, `password`, firstname, lastname) VALUES ('$email', '$password_hash', '$fname', '$lname');");
 
     if (!$result) {
         $errors[] = 'Something went wrong. Please try again or contact the administrator.';
@@ -58,13 +58,13 @@ if (isset($_POST['signup_user'])) {
     $email = mysqli_real_escape_string($conn, trim($_POST['email']));
     $password_1 = mysqli_real_escape_string($conn, trim($_POST['password_1']));
     $password_2 = mysqli_real_escape_string($conn, trim($_POST['password_2']));
-    $first_name = mysqli_real_escape_string($conn, trim($_POST['first_name']));
-    $last_name = mysqli_real_escape_string($conn, trim($_POST['last_name']));
+    $fname = mysqli_real_escape_string($conn, trim($_POST['fname']));
+    $lname = mysqli_real_escape_string($conn, trim($_POST['lname']));
 
-    $success = validateUser($conn, $email, $password_1, $password_2, $first_name, $last_name) && registerUser($conn, $email, $password_1, $first_name, $last_name);
+    $success = validateUser($conn, $email, $password_1, $password_2, $fname, $lname) && registerUser($conn, $email, $password_1, $fname, $lname);
 
     if ($success) {
-        $_SESSION['user'] = ['email' => $email, 'first_name' => $first_name, 'last_name' => $last_name];
+        $_SESSION['user'] = ['email' => $email, 'fname' => $fname, 'lname' => $lname];
         header('location: index.php');
     }
 }

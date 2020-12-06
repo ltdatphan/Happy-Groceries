@@ -3,7 +3,7 @@
     <h1 class="title-header">Shopping Cart</h1>
     <?php if (empty($_SESSION['cart'])) : ?>
         <h4>Your shopping cart is empty!</h4>
-        <a href="?page=products" class="btn card-btn" >Shop now</a>
+        <a href="?page=products" class="btn card-btn btn-margin" >Shop now</a>
     <?php else : ?>
         <div class="row">
             <div class="col">

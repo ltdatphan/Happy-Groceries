@@ -3,7 +3,7 @@
     <h1 class="title-header">Checkout</h1>
     <?php if (empty($_SESSION['cart'])) : ?>
         <h4>You recently checked out! Your shopping cart is empty!</h4>
-        <a href="?page=products" class="btn card-btn" >Shop now</a>
+        <a href="?page=products" class="btn card-btn btn-margin">Shop now</a>
     <?php else : ?>
     <div class="row">
         <div class="col">
@@ -14,7 +14,7 @@
                         $quantity = $_SESSION['cart'][$id];
                         $subtotal += $price * $quantity;
                     ?>
-                <div class="card cart d-flex products-card p-3 rounded mb-0">
+                <div class="card cart d-flex products-card shadow p-3 mb-5 rounded">
                     <div class="row no-gutters">
                         <a href="?page=item&id=<?= $id ?>"><img src="<?= $prod_url ?>" alt="Product image" style="width:150px;"></a>
                         <div class="d-flex card-body cart-body align-items-center">

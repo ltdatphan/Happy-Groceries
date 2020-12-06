@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="title-header">Contact us</h1>
+    <h1 class="title-header">Contact Us</h1>
     <h5>Want to give us feedback on your purchase or ask us any questions? Don't hesitate! Contact us today!</h5>
     <br><br>
     

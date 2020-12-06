@@ -1,5 +1,5 @@
-<div class="container">
-    <h1 class="title-header">Log in</h1>
+<div class="container custom-page">
+    <h1 class="title-header">Log In</h1>
     <?php if (!empty($errors)) : ?>
         <div class="alert alert-danger" role="alert">
             <?php foreach ($errors as $error) : ?>
@@ -19,11 +19,11 @@
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="remember-checkbox">
             <label name="remember" class="form-check-label" for="remember-checkbox">
-                Remember?
+                Remember Me
             </label>
         </div>
         <div class="form-group">
-            <button name="login_user" type="submit" class="btn btn-primary">Log in</button>
+            <button name="login_user" type="submit" class="btn card-btn btn-margin">Log in</button>
         </div>
     </form>
 </div>

@@ -7,14 +7,14 @@ if (isset($_POST['login_user'])) {
     $password = mysqli_real_escape_string($conn, trim($_POST['password']));
     $remember = isset($_POST['remember']);
 
-    $results = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
+    $results = mysqli_query($conn, "SELECT * FROM Users WHERE email='$email'");
     $user = mysqli_fetch_assoc($results);
 
     if (!is_null($user) && password_verify($password, $user['password'])) {
         //Login user, and redirect to main page.
-        $_SESSION['user'] = ['email' => $email, 'first_name' => $user['firstname'], 'last_name' => $user['lastname']];
+        $_SESSION['user'] = ['email' => $email, 'fname' => $user['firstname'], 'lname' => $user['lastname']];
         header('location: index.php');
     } else {
-        $errors[] = "Account with provided information not found.";
+        $errors[] = "Incorrect email or password.";
     }
 }
