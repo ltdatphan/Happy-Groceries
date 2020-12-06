@@ -15,8 +15,13 @@
                     <div class="navbar-nav ml-auto">
                         <a href="?page=about" class="nav-item nav-link">About us</a>
                         <a href="?page=contact" class="nav-item nav-link">Contact</a>
-                        <a href="#" class="nav-item nav-link">Sign up</a>
-                        <a href="#" class="nav-item nav-link">Log in</a>
+                        <?php if (empty($_SESSION['user'])): ?>
+                            <a href="?page=signup" class="nav-item nav-link">Sign up</a>
+                            <a href="?page=login" class="nav-item nav-link">Log in</a>
+                        <?php else: ?>
+                            <a href="?page=account" class="nav-item nav-link"><i class="fa fa-user"></i> <?= "{$_SESSION['user']['first_name']} {$_SESSION['user']['last_name']}" ?></a>
+                            <a href="?page=logout" class="nav-item nav-link">Log out</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
