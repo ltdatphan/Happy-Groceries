@@ -33,13 +33,19 @@ $conn = mysqli_connect($host, $username, $password, $database) or die("Cannot co
 //Retrieve list of products
 $sql = "SELECT * FROM Products ORDER BY category DESC";
 
-include '../src/cartProcessing.php';
+$page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'home';
+
+include_once '../src/cartProcessing.php';
+$processing_script_path = "../src/{$page}Processing.php";
+if (file_exists($processing_script_path)) {
+    include_once($processing_script_path);
+}
+
 include '../templates/header.php';
 
 echo "<div style='background-color: rgb(255,253,250);'>";
 
 // Router
-$page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'home';
 include $page . '.php';
 //End of router
 

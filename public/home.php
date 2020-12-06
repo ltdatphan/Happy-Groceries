@@ -1,3 +1,4 @@
+<!--First banner-->
 <div class=banner-img>
     <div class="container">
         <div class="banner-text">
@@ -12,6 +13,7 @@
     </div>
 </div>
 
+<!--Second banner-->
 <div class=banner-img2>
     <div class="container">
         <div class="banner-text">

@@ -3,7 +3,7 @@
     <h1 class="title-header">Shopping Cart</h1>
     <?php if (empty($_SESSION['cart'])) : ?>
         <h4>Your shopping cart is empty!</h4>
-        <a href="?page=products" class="btn card-btn" >Shop now</a>
+        <a href="?page=products" class="btn card-btn btn-margin" >Shop now</a>
     <?php else : ?>
         <div class="row">
             <div class="col">
@@ -49,7 +49,7 @@
             </div>
             <div class="col-sm-3">
                 <p>Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b></p>
-                <button class='btn card-btn'>Go to Checkout</button>
+                <a href="?page=checkout" class='btn card-btn'>Proceed to Checkout</a>
             </div>
         </div>
     <?php endif; ?>
