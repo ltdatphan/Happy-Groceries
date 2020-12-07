@@ -124,10 +124,9 @@ const renderResults = (recipes, page = 1, resPerPage = 5) => {
 
 
 
-const controlSearch =  async () => {
+const controlSearch =  async (query) => {
     clearResults();
-    state.search = new Search(document.getElementById("search__field").value);
-    document.getElementById("search__field").value=" ";
+    state.search = new Search(query);
     //if(query){
        // state.search = new Search();
             // 4) Search for recipes
@@ -148,11 +147,6 @@ const controlSearch =  async () => {
             
             
 }
-
-document.querySelector('.search').addEventListener('submit', e => {
-    e.preventDefault();
-    controlSearch();
-});
 
 const controlRecipe = async () => {
     const id = window.location.hash.replace('#', '');

@@ -62,6 +62,7 @@
         }
         echo '</div>';
         if ($search_item != "") : ?>
+        <hr>
         <div class="container custom-page">
             <h1 class="title-header"></h1>
             <div class="row">
@@ -78,4 +79,11 @@
                 </div>
             </div>
         </div>
+        <script src="./recipeMain.js"></script>
+        <script type="text/javascript">
+            controlSearch("<?= $search_item ?>");
+        </script>
+        <?php endif; 
+        
+    ?>
 </div>
