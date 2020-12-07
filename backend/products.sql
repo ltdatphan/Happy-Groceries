@@ -1,5 +1,6 @@
 DROP TABLE Products;
 
+/* Creating the Products table to keep track of the products registered on the site */
 CREATE TABLE Products (
     id          int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     prod_name   varchar(40),
@@ -86,7 +87,7 @@ VALUES ("Angus Eye of Round Roast", 18.49, "meats", "local", false, "beef bonele
 
 
 
-/* Inserting Dairy */
+/* Inserting dairy */
 INSERT INTO Products (prod_name, price, category, source, organic, tags, prod_desc, prod_url)
 VALUES ("Black Diamond Mozzarella", 6.99, "dairy", "local", false, "cheese",
 "Mozzarella is a traditionally southern Italian cheese made from Italian buffalo's milk by the pasta filata method. Fresh mozzarella is generally white but may vary seasonally to slightly yellow depending on the animal's diet.", 
@@ -122,7 +123,7 @@ VALUES ("Black Diamond Mozzarella", 6.99, "dairy", "local", false, "cheese",
 
 
 
-/* Inserting Beverages */
+/* Inserting beverages */
 INSERT INTO Products (prod_name, price, category, source, organic, tags, prod_desc, prod_url)
 VALUES ("Coca-Cola Classic", 4.99, "beverages", "imported", false, "soft drink pop soda sweet",
 "Coca-Cola, or Coke, is a carbonated soft drink manufactured by The Coca-Cola Company. Originally marketed as a temperance drink and intended as a patent medicine, it was invented in the late 19th century by John Stith Pemberton and was bought out by businessman Asa Griggs Candler.", 
@@ -158,7 +159,7 @@ VALUES ("Coca-Cola Classic", 4.99, "beverages", "imported", false, "soft drink p
 
 
 
-/* Inserting Bakery */
+/* Inserting bakery */
 INSERT INTO Products (prod_name, price, category, source, organic, tags, prod_desc, prod_url)
 VALUES ("Three Meat Pizza", 3.99, "bakery", "imported", false, "lunch dinner frozen",
 "Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven.", 

@@ -33,8 +33,7 @@ body {
 /* Title header used to title the current page */
 .title-header {
     text-align: center;
-    padding: 30px 0px;
-
+    padding-bottom: 16px;
 }
 
 /* Product card displayed in the Products page */
@@ -103,6 +102,18 @@ body {
 
 .card-btn:active {
     background-color: black;
+}
+
+.about-card {
+    height: 495px;
+}
+
+.about-description {
+    height: 72px;
+}
+
+.btn-margin {
+    margin-top: 16px;
 }
 
 .products-card p {
@@ -297,7 +308,24 @@ body {
 }
 
 .custom-page {
+    padding-top: 30px;
     padding-bottom: 30px;
+    min-height: 700px;
+}
+
+.social-btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.about-text {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.contact-info > span{
+    font-size: 20px;
+    color: black;
 }
 
 /*For recipe page*/
@@ -314,6 +342,22 @@ body {
     color: black;
 }
 
+.contact-card {
+    border-radius: 25px;
+    padding: 35px;
+    border: none;
+}
+
+.responsive-map {
+    overflow:hidden;
+    position: relative;
+}
+
+.responsive-map > iframe {
+    height:38.9vh;
+    width:100%;
+    border-radius: 25px;
+}
 
 /* For mobile devices */
 @media only screen and (max-width: 386px) {
@@ -321,7 +365,7 @@ body {
     .custom-footer li {
         font-size: 14px;
     }
-    
+
 }
 
 @media only screen and (max-width: 450px) {
