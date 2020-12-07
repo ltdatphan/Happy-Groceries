@@ -69,7 +69,7 @@ const renderRecipe = (recipe) => {
 <div class="cart" style="margin: 0">
     <div class="card cart d-flex products-card shadow p-3 mb-5 rounded">
         <div class="row no-gutters">
-            <img src="${recipe.image_url}" alt="${recipe.title}" style="width:150px; height: 150px;">
+            <img src="${recipe.image_url}" alt="${recipe.title}" style="width:150px; height: 150px; object-fit: cover;">
             <div class="card-body cart-body">
                 <h5 class="card-title" style="height:auto">${recipe.title}</h5>
                 <p class="card-description">${recipe.publisher}</p>
@@ -116,14 +116,10 @@ const renderInfo = () =>{
 
 const renderEmpty = (query) => {
     const markup = `
-    <p>No recipes found for <em>SEARCHTERM</em>. Try searching for another item to check for recipes</p>
+    <p>No recipes found for <em>${query}</em>. Try searching for another item to check for recipes.</p>
     `;
     document.querySelector('.recipe-container').insertAdjacentHTML('afterbegin', markup);
 }
-
-// const clearResults = () => {
-//     document.querySelector('.results__list').innerHTML=(' ');
-// }
 
 const clearInfo = () => {
     document.querySelector('.recipe-c').innerHTML=(' ');
@@ -145,7 +141,6 @@ const renderResults = (recipes, page = 1, resPerPage = 5) => {
 
 
 const controlSearch =  async (query) => {
-    // clearResults();
     state.search = new Search(query);
     //if(query){
        // state.search = new Search();
@@ -154,7 +149,7 @@ const controlSearch =  async (query) => {
      
          await state.search.getResults().then(data => {
                 recipeList = data.recipes;
-                if (recipeList.length>1){
+                if (recipeList){
                     renderInfo();
                 } else {
                     renderEmpty(query);
