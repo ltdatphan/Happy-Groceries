@@ -64,57 +64,37 @@ const renderRecipe = (recipe) => {
     const markup = `
 
 <li>
-    <a class="results__link" href="#${recipe.recipe_id}">
-    <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="${recipe.image_url}" alt="${recipe.title}">
-                    </div>
-            <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">${recipe.title}</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">${recipe.publisher}</small></p>
-                    </div>
+<a href="#${recipe.recipe_id} class="recipe-card">
+<div class="row">
+<div class="cart" style="margin: 0">
+    <div class="card cart d-flex products-card shadow p-3 mb-5 rounded">
+        <div class="row no-gutters">
+            <img src="${recipe.image_url}" alt="${recipe.title}" style="width:150px; height: 150px;">
+            <div class="card-body cart-body">
+                <h5 class="card-title" style="height:auto">${recipe.title}</h5>
+                <p class="card-description">${recipe.publisher}</p>
             </div>
+        </div>
     </div>
+</div>
+</div>
+</a>
 
 </li>`;
     document.querySelector(".results__list").insertAdjacentHTML('beforeend', markup);
 };
 
 const createIngredient= (ingredient) => {
-    const markup = `<p>${ingredient}</p>`;
+    const markup = `<li>${ingredient}</li>`;
     return markup;
 }
 
 const renderInfo = (obj) =>{
     const markup = `
-    <h1 class="recipe-title">${obj.title}</h1>
-    <div class=recipe-details>
-        <p>5 min</p>
-        <span>${obj.servings}</span>
-    </div>
-    <div>
-        <ul class=recipe-ingredients>
-        ${obj.ingredients.map(el => createIngredient(el)).join('')}
-        </ul>
-    </div>
-
-    <div>
-    <p>
-                    This recipe was carefully designed and tested by
-                    <span class="recipe__by">${recipe.author}</span>. Please check out directions at their website.
-                </p>
-                <a class="btn-small recipe__btn" href="${recipe.url}" target="_blank">
-                    <span>Directions</span>
-                    <svg class="search__icon">
-                        <use href="img/icons.svg#icon-triangle-right"></use>
-                    </svg>
-
-                </a>
-        <a>click here for directions</a>
-    </div>
+    <ul>
+    ${obj.ingredients.map(el => createIngredient(el)).join('')}
+     </ul>
+    <a href="${recipe.url}" class='btn card-btn'>View Directions</a>
     `;
 
     document.querySelector('.recipe-card').insertAdjacentHTML('afterbegin', markup);

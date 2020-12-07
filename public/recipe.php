@@ -8,71 +8,43 @@
 </form>
 </div>
 
-<div class="row">
-     <div class="col-md-4">
-        <div class ="results">
-            <ul class="results__list">        
-              <!--  <li>
-                    <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="...">
-                                    </div>
-                            <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                            </div>
-                    </div>
 
-                </li>
-                <li>
-                    <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="...">
-                                    </div>
-                            <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                            </div>
-                    </div>
 
-                </li>
-            -->
+
+
+
+
+<div class="container custom-page">
+    <h1 class="title-header">Recipes</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <ul class="results__list">
+                    </ul>
+        </div>
+            <!-- Display subtotal and chckout button -->
+            <div class="col-sm-6">
+                <h4>Ingredients</h4>
+                <div class ="recipe-card">
+                <p>Please select a recipe to view its ingredients.</p>
+                <!--
+                <ul>
+                    <li>INGREDIENT 1</li>
+                    <li>INGREDIENT 2</li>
+                </ul>
+                <a href="#" class='btn card-btn'>View Directions</a>
+                -->
+                </div>
                 
-        </ul>
-
+            </div>
         </div>
-    </div>
-
-    <div class="col-md-8">
-        <div class=recipe-card >
-     <!--       <h1 class="recipe-title">recipesss</h1>
-        <div class=recipe-details>
-            <p>cook time 45 min</p>
-            <span>servings 4 people</span>
-        </div>
-        <div class=recipe-ingredients>
-            <ul>
-                <li>test</li>
-                <li>test2</li>
-            </ul>
-        </div>
-
-        <div>
-            <a>click here for directions</a>
-        </div> -->
-        
 </div>
-    </div>
 
-</div>
+
+
+
+
+
+
 <script src="./recipeMain.js"></script>
 
     
