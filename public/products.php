@@ -21,7 +21,7 @@
         else $search_item = "";
 
         /* If user searched for an item, display search query here */
-        if ($search_item != "") echo "<h4>Showing results for: <em>".$search_item."</em></h4><br>";
+        if ($search_item != "") echo "<h4>Showing results for: <em>\"".$search_item."\"</em></h4><br>";
 
         /* Get the products */
         $result = mysqli_query($conn, $sql);
@@ -31,6 +31,7 @@
 
         /* Display the products */
         echo '<div class="row">';
+        $items_found = 0;
         while($row = mysqli_fetch_assoc($result)) {
             /* Get all product attributes */
             $category = $row["category"];
@@ -38,6 +39,7 @@
             $prod_name = $row["prod_name"];
             $string_to_search = $prod_name.$category.$row["tags"];
             if ($search_item != "" && (!is_numeric(stripos($string_to_search, $search_item)))) continue;
+            $items_found++;
             $id = $row["id"];
             $prod_desc = $row["prod_desc"];
             $price = $row["price"];
@@ -70,12 +72,13 @@
             </div>
             <?php
         }
+        if ($items_found == 0) echo "<b>No products found!</b>";
         echo '</div>';
         if ($search_item != "") : ?>
         <hr>
         <div class="recipe-container">
         </div>
-        <script src="./recipeMain.js"></script>
+        <script src="assets/scripts/recipeMain.js"></script>
         <script type="text/javascript">
             controlSearch("<?= $search_item ?>");
         </script>

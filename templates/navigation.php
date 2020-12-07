@@ -29,7 +29,7 @@
                 <!-- Search bar-->
                 <form style="width: 70%;" id="search-form" autocomplete="off" method="get">
                     <input type='hidden' name='page' value='products'>
-                    <input id="search-bar" type="text" name="item" placeholder="Search...">
+                    <input id="search-bar" type="text" name="item" placeholder="Search for products or recipes...">
                 </form>
                 <div></div>
                 <!-- Search and cart buttons-->
