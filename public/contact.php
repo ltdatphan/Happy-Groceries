@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container custom-page">
     <h1 class="title-header">Contact Us</h1>
     <h5>Want to give us feedback on your purchase or ask us any questions? Don't hesitate! Contact us today!</h5>
     <br><br>

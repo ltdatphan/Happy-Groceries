@@ -36,7 +36,7 @@ $sql = "SELECT * FROM Products ORDER BY category DESC";
 $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'home';
 
 include_once '../src/cartProcessing.php';
-$processing_script_path = "../src/{$page}Processing.php";
+$processing_script_path = '../src/' . ($_GET['page'] ?? 'home') . 'Processing.php';
 if (file_exists($processing_script_path)) {
     include_once($processing_script_path);
 }
@@ -51,5 +51,4 @@ include $page . '.php';
 
 echo "</div>";
 
-include '../templates/footer.php'
-?>
+include '../templates/footer.php';

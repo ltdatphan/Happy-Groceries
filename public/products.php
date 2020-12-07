@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container custom-page">
     <?php
         /* Category gotten from the query string */
         $cat_param = $_GET['category'] ?? '';

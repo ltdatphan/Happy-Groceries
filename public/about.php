@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container custom-page">
     <h1 class="title-header">About Us</h1>
     <h5 class="about-text">We are group 17 section 3-4 of CPS530. This project encompasses our vision of what a modern shopping cart would look like. 
     It helped us put into practice what we learned in class and incorporate new technologies along with it! We hope you like it.</h5>

@@ -1,7 +1,11 @@
 <?php $subtotal = 0.0 ?>
 <div class="container custom-page" style="text-align:center">
     <h1 class="title-header">Checkout</h1>
-    <?php if (empty($_SESSION['cart'])) : ?>
+    <?php if (empty($_SESSION['user'])) : ?>
+        <h4>You are not logged in! Please log in or create a new account first.</h4>
+        <a href="?page=login" class="btn card-btn btn-margin">Log In</a>
+        <a href="?page=signup" class="btn card-btn btn-margin">Sign Up</a>
+    <?php elseif (empty($_SESSION['cart'])) : ?>
         <h4>You recently checked out! Your shopping cart is empty!</h4>
         <a href="?page=products" class="btn card-btn btn-margin">Shop now</a>
     <?php else : ?>
