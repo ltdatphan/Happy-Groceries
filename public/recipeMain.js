@@ -63,8 +63,8 @@ class Recipe {
 const renderRecipe = (recipe) => {
     const markup = `
 
-<li>
-<a href="#${recipe.recipe_id} class="recipe-card">
+
+<a href="#${recipe.recipe_id}" class="recipe-card">
 <div class="row">
 <div class="cart" style="margin: 0">
     <div class="card cart d-flex products-card shadow p-3 mb-5 rounded">
@@ -80,7 +80,7 @@ const renderRecipe = (recipe) => {
 </div>
 </a>
 
-</li>`;
+`;
     document.querySelector(".results__list").insertAdjacentHTML('beforeend', markup);
 };
 

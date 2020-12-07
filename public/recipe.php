@@ -18,8 +18,8 @@
     <h1 class="title-header">Recipes</h1>
         <div class="row">
             <div class="col-sm-6">
-                <ul class="results__list">
-                    </ul>
+                <div class="results__list">
+                    </div>
         </div>
             <!-- Display subtotal and chckout button -->
             <div class="col-sm-6">

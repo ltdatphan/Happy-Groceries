@@ -309,6 +309,10 @@ body {
     width:300px;
 }
 
+.recipe-card, .recipe-card:hover {
+    text-decoration: none;
+    color: black;
+}
 
 
 /* For mobile devices */
