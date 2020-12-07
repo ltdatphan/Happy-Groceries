@@ -71,5 +71,15 @@
             <?php
         }
         echo '</div>';
+        if ($search_item != "") : ?>
+        <hr>
+        <div class="container custom-page recipe-container">
+        </div>
+        <script src="./recipeMain.js"></script>
+        <script type="text/javascript">
+            controlSearch("<?= $search_item ?>");
+        </script>
+        <?php endif; 
+        
     ?>
 </div>
