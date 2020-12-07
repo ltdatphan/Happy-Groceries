@@ -49,7 +49,7 @@
                 <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/37843657?s=88&v=4">
                 <div class="card-body">
                     <h5 class="card-title">Rahul Kothwal</h5>
-                    <p class="card-description about-description">Worked on Javascript.</p>
+                    <p class="card-description about-description">Worked on Javascript and recipes backend.</p>
                     <a href="https://github.com/WizCali" class="btn btn-primary social-btn btn-dark" target="_blank"><i class="fa fa-github"></i> Visit Github</a>
                 </div>
             </div>
