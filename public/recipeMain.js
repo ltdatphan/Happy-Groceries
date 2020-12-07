@@ -93,8 +93,9 @@ const numResults = (allResults) => {
     return allResults.length;
 }
 
-const renderInfo = () =>{
+const renderInfo = (query) =>{
     const markup = `
+    <h2 class="title-header">Recipes for <em>"${query}"</em></h2>
     <div class="row">
                 <div class="col-sm-6">
                     <div class="results__list">
@@ -119,7 +120,7 @@ const renderIngredients = (obj) => {
     <ul>
     ${obj.ingredients.map(el => createIngredient(el)).join('')}
         </ul>
-                <a href="${obj.url}" class='btn card-btn'>View Directions</a>
+                <a href="${obj.url}" class='btn card-btn' target="_blank">View Directions</a>
     `;
     document.querySelector('.recipe-c').insertAdjacentHTML('afterbegin', markup);
 }
@@ -160,7 +161,7 @@ const controlSearch =  async (query) => {
          await state.search.getResults().then(data => {
                 recipeList = data.recipes;
                 if (recipeList){
-                    renderInfo();
+                    renderInfo(query);
                     renderResults(recipeList);
                 } else {
                     renderEmpty(query);
