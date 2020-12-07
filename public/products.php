@@ -72,7 +72,7 @@
             </div>
             <?php
         }
-        if ($items_found == 0) echo "<b>No products found!</b>";
+        if ($items_found == 0) echo "<p style='margin-left: 16px'>No products found!</p>";
         echo '</div>';
         if ($search_item != "") : ?>
         <hr>
