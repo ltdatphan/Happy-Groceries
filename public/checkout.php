@@ -47,22 +47,22 @@ $subtotal = 0.00;
                         </div>
                         <div class="mb-3">
                             <label for="postal-code-input">Postal Code</label>
-                            <input name="postal_code" id="postal-code-input" type="text" class="form-control" required>
+                            <input name="postal_code" id="postal-code-input" pattern="[A-Za-z][0-9][A-Za-z] ?[0-9][A-Za-z][0-9]" placeholder="A1B 2C3" type="text" class="form-control" required>
                         </div>
                     </div>
                     <div>
                         <div class="mb-3">
                             <label for="credit-card-input">Credit Card Number</label>
-                            <input name="credit_card" type="text" id="credit-card-input" class="form-control" required>
+                            <input name="credit_card" pattern="[0-9]{4} ?[0-9]{4} ?[0-9]{4} ?[0-9]{4}" placeholder="16-digit credit card number" type="text" id="credit-card-input" class="form-control" required>
                         </div>
                         <div class="form-row mb-3">
                             <div class="col mb-3">
                                 <label for="expiration-date-input">Expiration Date</label>
-                                <input name="expiration_date" type="date" id="expiration-date-input" class="form-control" required>
+                                <input name="expiration_date" pattern="[0-9]{2}/[0-9]{2}" type="text" id="expiration-date-input" class="form-control" placeholder="mm/yy" required>
                             </div>
                             <div class="col-2 mb-3">
-                                <label for="cvv-input">CVV</label>
-                                <input name="cvv" type="text" id="cvv-input" class="form-control" size="3" required>
+                                <label for="cvv-input">CVC</label>
+                                <input name="cvv" pattern="[0-9]{3}" placeholder="###" type="text" id="cvv-input" class="form-control" size="3" required>
                             </div>
                         </div>
                     </div>

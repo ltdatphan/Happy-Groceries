@@ -29,7 +29,7 @@
                 <!-- Search bar-->
                 <form style="width: 70%;" id="search-form" autocomplete="off" method="get">
                     <input type='hidden' name='page' value='products'>
-                    <input id="search-bar" type="text" name="item" value="Search..." onfocus="focused()" onblur="unfocused()" style="color:rgb(125,125,125)">
+                    <input id="search-bar" type="text" name="item" placeholder="Search...">
                 </form>
                 <div></div>
                 <!-- Search and cart buttons-->
