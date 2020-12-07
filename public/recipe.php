@@ -15,7 +15,7 @@
 
 
 <div class="container custom-page">
-    <h1 class="title-header">Recipes</h1>
+    <h1 class="title-header"></h1>
         <div class="row">
             <div class="col-sm-6">
                 <div class="results__list">
