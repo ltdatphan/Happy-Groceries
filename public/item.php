@@ -12,7 +12,7 @@
         $price = $row["price"];
         $prod_url = $row["prod_url"];?>
 
-        <!-- Display the info of product -->
+        <!-- Display the info of product in HTML -->
         <div class="container">
             <h1 class="title-header">Product Details</h1>
             <div class="row" style="padding-top:15px;padding-bottom:60px">
