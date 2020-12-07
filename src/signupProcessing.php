@@ -3,12 +3,6 @@
 /** @var mysqli $conn */
 $errors = [];
 
-function isValidEmail($email)
-{
-    global $errors;
-    return true;
-}
-
 function isValidPassword($password)
 {
     global $errors;
