@@ -109,7 +109,7 @@ const clearInfo = () => {
     document.querySelector('.recipe-card').innerHTML=(' ');
 }
 
-const renderResults = (recipes, page = 1, resPerPage = 10) => {
+const renderResults = (recipes, page = 1, resPerPage = 5) => {
     // render results of currente page
     const start = (page - 1) * resPerPage;
     const end = page * resPerPage;
