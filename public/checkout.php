@@ -1,15 +1,19 @@
 <?php
 $subtotal = 0.00;
 ?>
-<div class="container">
+<div class="container custom-page">
     <h1 class="title-header">Checkout</h1>
     <?php if (empty($_SESSION['user'])) : ?>
-        <h4>You are not logged in! Please log in or create a new account first.</h4>
-        <a href="?page=login" class="btn card-btn btn-margin">Log In</a>
-        <a href="?page=signup" class="btn card-btn btn-margin">Sign Up</a>
+        <div style="text-align: center">
+            <h4>You are not logged in! Please log in or create a new account first.</h4>
+            <a href="?page=login" class="btn card-btn btn-margin">Log In</a>
+            <a href="?page=signup" class="btn card-btn btn-margin">Sign Up</a>
+        </div>
     <?php elseif (empty($_SESSION['cart'])) : ?>
-        <h4>You recently checked out! Your shopping cart is empty!</h4>
-        <a href="?page=products" class="btn card-btn btn-margin">Shop now</a>
+        <div style="text-align: center">
+            <h4>You recently checked out! Your shopping cart is empty!</h4>
+            <a href="?page=products" class="btn card-btn btn-margin">Shop Now</a>
+        </div>
     <?php else : ?>
         <div class="row">
             <!-- Billing address -->
@@ -61,7 +65,7 @@ $subtotal = 0.00;
                         </div>
                     </div>
                     <div class="form-group">
-                        <button name="checkout" type="submit" class="btn card-btn btn-margin">Checkout</button>
+                        <button name="checkout" type="submit" class="btn card-btn btn-margin">Purchase</button>
                     </div>
                 </form>
             </div>
@@ -81,18 +85,22 @@ $subtotal = 0.00;
                         </li>
                     <?php endwhile;
                         $shipping = $subtotal > 40.00 ? 0.00 : 5.00;
-                        $hst = $subtotal * 0.13;
+                        $hst = ($subtotal + $shipping) * 0.13;
                         $total = $subtotal + $hst + $shipping;
                     ?>
-                    <li class="list-group-item d-flex justify-content-between list-group-item-secondary">
+                    <li class="list-group-item d-flex justify-content-between list-group-item-info">
+                        <div>Subtotal</div>
+                        <span>$<?= sprintf("%.2f", $subtotal) ?></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between list-group-item-warning">
                         <div>Shipping</div>
                         <span>$<?= sprintf("%.2f", $shipping) ?></span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between list-group-item-secondary">
+                    <li class="list-group-item d-flex justify-content-between list-group-item-warning">
                         <div>HST</div>
                         <span>$<?= sprintf("%.2f", $hst) ?></span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between list-group-item-primary">
+                    <li class="list-group-item d-flex justify-content-between list-group-item-success">
                         <div>Total</div>
                         <b>$<?= sprintf("%.2f", $total) ?></b>
                     </li>

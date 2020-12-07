@@ -1,10 +1,13 @@
 <?php $subtotal = 0.0 ?>
-<div class="container custom-page" style="text-align:center">
+<div class="container custom-page">
     <h1 class="title-header">Shopping Cart</h1>
     <?php if (empty($_SESSION['cart'])) : ?>
-        <h4>Your shopping cart is empty!</h4>
-        <a href="?page=products" class="btn card-btn btn-margin" >Shop now</a>
+        <div style="text-align: center">
+            <h4 style="text-align:">Your shopping cart is empty!</h4>
+            <a href="?page=products" class="btn card-btn btn-margin">Shop Now</a>
+        </div>
     <?php else : ?>
+        <p><em>Note: Free shipping on orders over $40.00 CAD!</em></p>
         <div class="row">
             <div class="col">
                 <div class="cart">

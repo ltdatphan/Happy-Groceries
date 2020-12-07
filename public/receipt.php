@@ -1,6 +1,6 @@
 <?php $subtotal = 0.0 ?>
 <div class="container custom-page" style="text-align:center">
-    <h1 class="title-header">Checkout</h1>
+    <h1 class="title-header">Your Receipt</h1>
     <?php if (empty($_SESSION['user'])) : ?>
         <h4>You are not logged in! Please log in or create a new account first.</h4>
         <a href="?page=login" class="btn card-btn btn-margin">Log In</a>
@@ -43,11 +43,7 @@
         <div class="col-sm-3">
             <p>Subtotal: <b><?= "\$" . sprintf("%.2f", $subtotal) . " CAD" ?></b></p>
             <?php 
-                if ($subtotal >= 40) {
-                    $shipping = 0;
-                } else {
-                    $shipping = 5;
-                }
+                $shipping = $subtotal > 40.00 ? 0.00 : 5.00;
                 $tax = ($subtotal + $shipping)*0.13;
                 $total = $subtotal + $shipping + $tax;
                 ?>
@@ -57,6 +53,11 @@
         </div>
     </div>
     <h3>Thank you for shopping with us!</h3>
-    <?php unset($_SESSION['cart']);?>
+    <?php 
+    unset($_SESSION['cart']);
+    $sql = "INSERT INTO Orders (email, purchase_date, total) VALUES ('".$_SESSION['user']['email']."', DATE('".date("Y-m-d")."'), '$total')";
+    mysqli_query($conn, $sql)
+    ?>
+    <p>Your purchase has been registered on your account.<p>
     <?php endif; ?>
 </div>
