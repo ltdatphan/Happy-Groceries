@@ -64,7 +64,7 @@ const renderRecipe = (recipe) => {
     const markup = `
 
 
-<a href="#${recipe.recipe_id}" class="recipe-c">
+<a href="#${recipe.recipe_id}" class="recipe-card">
 <div class="row">
 <div class="cart" style="margin: 0">
     <div class="card cart d-flex products-card shadow p-3 mb-5 rounded">
@@ -97,7 +97,7 @@ const renderInfo = (obj) =>{
     <a href="${obj.url}" class='btn card-btn'>View Directions</a>
     `;
 
-    document.querySelector('.recipe-card').insertAdjacentHTML('afterbegin', markup);
+    document.querySelector('.recipe-c').insertAdjacentHTML('afterbegin', markup);
 
 };
 
@@ -106,7 +106,7 @@ const clearResults = () => {
 }
 
 const clearInfo = () => {
-    document.querySelector('.recipe-card').innerHTML=(' ');
+    document.querySelector('.recipe-c').innerHTML=(' ');
 }
 
 const renderResults = (recipes, page = 1, resPerPage = 5) => {

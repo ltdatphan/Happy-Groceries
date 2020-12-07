@@ -24,7 +24,7 @@
             <!-- Display subtotal and chckout button -->
             <div class="col-sm-6">
                 <h4>Ingredients</h4>
-                <div class ="recipe-card">
+                <div class ="recipe-c">
                 <p>Please select a recipe to view its ingredients.</p>
                 <!--
                 <ul>
