@@ -30,7 +30,7 @@ $order_results = mysqli_query($conn, "SELECT * FROM Orders WHERE email='{$_SESSI
                     <thead>
                         <tr>
                             <th scope="col">Order ID</th>
-                            <th scope="col">Purchase Date</th>
+                            <th scope="col">Purchase Date (UTC)</th>
                             <th scope="col" style="text-align: right">Total</th>
                         </tr>
                     </thead>
