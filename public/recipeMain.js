@@ -94,7 +94,7 @@ const renderInfo = (obj) =>{
     <ul>
     ${obj.ingredients.map(el => createIngredient(el)).join('')}
     </ul>
-    <a href="${obj.url}" class='btn card-btn'>View Directions</a>
+    <a href="${obj.url}" class='btn card-btn' target="_blank">View Directions</a>
     `;
 
     document.querySelector('.recipe-c').insertAdjacentHTML('afterbegin', markup);

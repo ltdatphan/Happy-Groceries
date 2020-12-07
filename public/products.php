@@ -61,5 +61,21 @@
             <?php
         }
         echo '</div>';
-    ?>
+        if ($search_item != "") : ?>
+        <div class="container custom-page">
+            <h1 class="title-header"></h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="results__list">
+                    </div>
+                </div>
+                <!-- Display subtotal and chckout button -->
+                <div class="col-sm-6">
+                    <h4>Ingredients</h4>
+                    <div class ="recipe-c">
+                    <p>Please select a recipe to view its ingredients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>

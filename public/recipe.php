@@ -16,27 +16,19 @@
 
 <div class="container custom-page">
     <h1 class="title-header"></h1>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="results__list">
-                    </div>
-        </div>
-            <!-- Display subtotal and chckout button -->
-            <div class="col-sm-6">
-                <h4>Ingredients</h4>
-                <div class ="recipe-c">
-                <p>Please select a recipe to view its ingredients.</p>
-                <!--
-                <ul>
-                    <li>INGREDIENT 1</li>
-                    <li>INGREDIENT 2</li>
-                </ul>
-                <a href="#" class='btn card-btn'>View Directions</a>
-                -->
-                </div>
-                
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="results__list">
             </div>
         </div>
+        <!-- Display subtotal and chckout button -->
+        <div class="col-sm-6">
+            <h4>Ingredients</h4>
+            <div class ="recipe-c">
+            <p>Please select a recipe to view its ingredients.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 
