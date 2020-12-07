@@ -89,17 +89,37 @@ const createIngredient= (ingredient) => {
     return markup;
 }
 
-const renderInfo = (obj) =>{
+const numResults = (allResults) => {
+    return allResults.length;
+}
+
+const renderInfo = () =>{
     const markup = `
-    <ul>
-    ${obj.ingredients.map(el => createIngredient(el)).join('')}
-    </ul>
-    <a href="${obj.url}" class='btn card-btn' target="_blank">View Directions</a>
+    <div class="row">
+                <div class="col-sm-6">
+                    <div class="results__list">
+                    </div>
+                </div>
+                <!-- Display subtotal and chckout button -->
+                <div class="col-sm-6">
+                    <h4>Ingredients</h4>
+                    <div class ="recipe-c">
+                    <p>Please select a recipe to view its ingredients.</p>
+                    </div>
+                </div>
+            </div>
     `;
 
-    document.querySelector('.recipe-c').insertAdjacentHTML('afterbegin', markup);
+    document.querySelector('.recipe-container').insertAdjacentHTML('afterbegin', markup);
 
 };
+
+const renderEmpty = (query) => {
+    const markup = `
+    <p>No recipes found for <em>SEARCHTERM</em>. Try searching for another item to check for recipes</p>
+    `;
+    document.querySelector('.recipe-container').insertAdjacentHTML('afterbegin', markup);
+}
 
 const clearResults = () => {
     document.querySelector('.results__list').innerHTML=(' ');
@@ -134,6 +154,11 @@ const controlSearch =  async (query) => {
      
          await state.search.getResults().then(data => {
                 recipeList = data.recipes;
+                if (recipeList.length>1){
+                    renderInfo();
+                } else {
+                    renderEmpty(query);
+                }
                // console.log(recipeList);
             });
             console.log(recipeList);
@@ -156,7 +181,10 @@ const controlRecipe = async () => {
        state.recipe.calcTime();
         state.recipe.calcServings();
         clearInfo();
-        renderInfo(state.recipe);
+        
+         renderInfo(state.recipe);
+        
+    
     }
 };
 
