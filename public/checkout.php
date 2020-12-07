@@ -3,12 +3,14 @@ $subtotal = 0.00;
 ?>
 <div class="container custom-page">
     <h1 class="title-header">Checkout</h1>
+    <!-- Check if user is logged in -->
     <?php if (empty($_SESSION['user'])) : ?>
         <div style="text-align: center">
             <h4>You are not logged in! Please log in or create a new account first.</h4>
             <a href="?page=login" class="btn card-btn btn-margin">Log In</a>
             <a href="?page=signup" class="btn card-btn btn-margin">Sign Up</a>
         </div>
+    <!-- Check if cart is empty -->
     <?php elseif (empty($_SESSION['cart'])) : ?>
         <div style="text-align: center">
             <h4>You recently checked out! Your shopping cart is empty!</h4>
@@ -16,7 +18,7 @@ $subtotal = 0.00;
         </div>
     <?php else : ?>
         <div class="row">
-            <!-- Billing address -->
+            <!-- Billing details -->
             <div class="col">
                 <h3>Billing Details</h3>
                 <form action="?page=receipt" method="POST">
@@ -69,7 +71,7 @@ $subtotal = 0.00;
                     </div>
                 </form>
             </div>
-            <!-- Cart -->
+            <!-- Show cart -->
             <div class="col-4">
                 <h3>Your Cart</h3>
                 <ul class="list-group">
