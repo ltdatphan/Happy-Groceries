@@ -64,7 +64,6 @@
         if ($search_item != "") : ?>
         <hr>
         <div class="container custom-page recipe-container">
-          
         </div>
         <script src="./recipeMain.js"></script>
         <script type="text/javascript">

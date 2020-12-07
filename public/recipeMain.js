@@ -121,9 +121,9 @@ const renderEmpty = (query) => {
     document.querySelector('.recipe-container').insertAdjacentHTML('afterbegin', markup);
 }
 
-const clearResults = () => {
-    document.querySelector('.results__list').innerHTML=(' ');
-}
+// const clearResults = () => {
+//     document.querySelector('.results__list').innerHTML=(' ');
+// }
 
 const clearInfo = () => {
     document.querySelector('.recipe-c').innerHTML=(' ');
@@ -145,7 +145,7 @@ const renderResults = (recipes, page = 1, resPerPage = 5) => {
 
 
 const controlSearch =  async (query) => {
-    clearResults();
+    // clearResults();
     state.search = new Search(query);
     //if(query){
        // state.search = new Search();
@@ -163,7 +163,8 @@ const controlSearch =  async (query) => {
             });
             console.log(recipeList);
             // 5) Render results on UI
-          renderResults(recipeList);
+            renderResults(recipeList);
+          
        
        
   // }
