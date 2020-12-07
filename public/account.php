@@ -24,14 +24,14 @@ $order_results = mysqli_query($conn, "SELECT * FROM Orders WHERE email='{$_SESSI
         <div class="col">
             <h2>Order History</h2>
             <?php if (mysqli_num_rows($order_results) === 0) : ?>
-                <b>No orders exist</b>
+                <b>You haven't made any orders yet!</b>
             <?php else : ?>
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Order #</th>
-                            <th scope="col">Purchase Date</th>
-                            <th scope="col">Total</th>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Purchase Date (UTC)</th>
+                            <th scope="col" style="text-align: right">Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,7 +39,7 @@ $order_results = mysqli_query($conn, "SELECT * FROM Orders WHERE email='{$_SESSI
                             <tr>
                                 <th scope="row"><?= $row['id'] ?></th>
                                 <td><?= $row['purchase_date'] ?></td>
-                                <td style="text-align: right;">$<?= $row['total'] ?> CAD</td>
+                                <td style="text-align: right;"><?= "\$" . sprintf("%.2f", $row['total']) . " CAD" ?></td>
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
