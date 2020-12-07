@@ -114,6 +114,13 @@ const renderInfo = () =>{
 
 };
 
+const renderIngredients = (obj) => {
+    const markup = `
+    <p>These are the ingredients</p>
+    `;
+    document.querySelector('.recipe-c').insertAdjacentHTML('afterbegin', markup);
+}
+
 const renderEmpty = (query) => {
     const markup = `
     <p>No recipes found for <em>${query}</em>. Try searching for another item to check for recipes.</p>
@@ -151,6 +158,7 @@ const controlSearch =  async (query) => {
                 recipeList = data.recipes;
                 if (recipeList){
                     renderInfo();
+                    renderResults(recipeList);
                 } else {
                     renderEmpty(query);
                 }
@@ -158,7 +166,7 @@ const controlSearch =  async (query) => {
             });
             console.log(recipeList);
             // 5) Render results on UI
-            renderResults(recipeList);
+            
           
        
        
@@ -178,7 +186,7 @@ const controlRecipe = async () => {
         state.recipe.calcServings();
         clearInfo();
         
-         renderInfo(state.recipe);
+         renderIngredients(state.recipe);
         
     
     }
