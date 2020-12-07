@@ -3,8 +3,8 @@ const state = {};
 //ALL MODEL CLASSES
 //SEARCH CLASS
 class Search {
-    constructor() {
-        this.query = "pizza";
+    constructor(query) {
+        this.query = query;
     }
 
    async getResults(){
@@ -110,6 +110,10 @@ const renderInfo = (obj) =>{
 
 };
 
+const clearResults = () => {
+    document.querySelector('.results__list').innerHTML=(' ');
+}
+
 const clearInfo = () => {
     document.querySelector('.recipe-card').innerHTML=(' ');
 }
@@ -125,18 +129,16 @@ const renderResults = (recipes, page = 1, resPerPage = 10) => {
    // renderButtons(page, recipes.length, resPerPage);
 };
 
-state.search = new Search();
 
-const getInput = () => {
-    document.querySelector(".search__field").value;
-}
+
+
 
 const controlSearch =  async () => {
-    const query = getInput();
-    console.log(query);
+    clearResults();
+    state.search = new Search(document.getElementById("search__field").value);
+    document.getElementById("search__field").value=" ";
     //if(query){
        // state.search = new Search();
-
             // 4) Search for recipes
             let recipeList;
      
@@ -173,6 +175,6 @@ const controlRecipe = async () => {
     }
 };
 
-window.addEventListener('hashchange', controlRecipe)
+window.addEventListener('hashchange', controlRecipe);
 
 

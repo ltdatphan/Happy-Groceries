@@ -1,7 +1,7 @@
 <div>
 <h1 class='recipe-title'>Recipes</h1>
 <form class="search">
-     <input type="text" class="search__field" placeholder="Search a milli recipes">
+     <input type="text" id="search__field" class="search__field" placeholder="Search a milli recipes">
                  <button class="btn search__btn">
                     <span>Search</span>
                 </button>
