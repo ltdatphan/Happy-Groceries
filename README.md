@@ -3,7 +3,7 @@ This is Final Project for CPS530 Web Development.
 Made by Dat Phan, Cesar Perez, Michael Tandoc, Rahul Kothwal. See contributers list for more details.  
 Currently hosted on InfinityFree hosting service.  
 
-Check this project out at [happygrocery.infinityfreeapp.com](http://happygrocery.infinityfreeapp.com/).
+# Check this project out at [happygrocery.infinityfreeapp.com](http://happygrocery.infinityfreeapp.com/).
 
 # Description
 Our group's idea is to make a functional online grocerry store that contains the following features: 
@@ -11,7 +11,8 @@ Our group's idea is to make a functional online grocerry store that contains the
 - Search feature that displays the products and related recepies
 - Display products by category 
 - Account sign up and log in system
-- Purchase history for each account
+- Purchase history for each account 
+- Database system (mySQL) used to store product info, customer log in as well as purchase history
 
 # Resources used in this project
 - [Bootstrap 4](https://getbootstrap.com/)
