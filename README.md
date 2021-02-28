@@ -1,9 +1,9 @@
 # Happy Groceries
 This is Final Project for CPS530 Web Development.  
 Made by Dat Phan, Cesar Perez, Michael Tandoc, Rahul Kothwal. See contributers list for more details.  
-Currently hosted on InfinityFree hosting service.  
+Currently hosted on InfinityFree hosting service.    
 
-# Check this project out at [happygrocery.infinityfreeapp.com](http://happygrocery.infinityfreeapp.com/).
+Check this project out at [happygrocery.infinityfreeapp.com](http://happygrocery.infinityfreeapp.com/).
 
 # Description
 Our group's idea is to make a functional online grocerry store that contains the following features: 
