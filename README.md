@@ -10,6 +10,7 @@ Our group's idea is to make a functional online grocerry store that contains the
 - Responsive and inuitive UI for users shopping from computers, tablets or smartphones. 
 - Search feature that displays the products and related recepies
 - Display products by category 
+- Cart system that keeps track of items
 - Account sign up and log in system
 - Purchase history for each account 
 - Database system (mySQL) used to store product info, customer log in as well as purchase history
